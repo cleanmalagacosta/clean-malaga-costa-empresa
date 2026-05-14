@@ -80,6 +80,7 @@ max-width:800px;
 .hero h1{font-size:48px;margin-bottom:20px;}
 .hero p{margin-bottom:20px;}
 
+/* BOTONES PREMIUM */
 .btn{
 background:#ef4444;
 color:white;
@@ -87,6 +88,13 @@ padding:14px 30px;
 border-radius:10px;
 text-decoration:none;
 display:inline-block;
+transition:all 0.3s ease;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .urgency{
@@ -98,6 +106,18 @@ font-size:14px;
 section{
 padding:80px 10%;
 text-align:center;
+}
+
+/* ANIMACIONES */
+.fade-in{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 .cards{
@@ -113,11 +133,12 @@ padding:20px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:left;
-transition:0.3s;
+transition:all 0.3s ease;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 .card img{
@@ -128,7 +149,7 @@ border-radius:10px;
 margin-bottom:15px;
 }
 
-/* FLEX */
+/* FLEX EMPRESA */
 .flex{
 display:flex;
 gap:40px;
@@ -148,12 +169,6 @@ width:45%;
 /* CTA */
 .cta{
 background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
-color:white;
-}
-
-/* DARK */
-.dark{
-background:#0b3c6f;
 color:white;
 }
 
@@ -209,11 +224,10 @@ width:100%;
 </nav>
 
 <!-- HERO -->
-<section id="inicio" class="hero">
+<section id="inicio" class="hero fade-in">
 <div class="hero-content">
 
 <h1>Limpieza Profesional en Málaga en 24h</h1>
-
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
 
 <a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20presupuesto">
@@ -225,8 +239,8 @@ Solicitar presupuesto GRATIS
 </div>
 </section>
 
-<!-- SERVICIOS CON IMÁGENES -->
-<section id="servicios">
+<!-- SERVICIOS -->
+<section id="servicios" class="fade-in">
 <h2>Servicios Profesionales de Limpieza</h2>
 
 <div class="cards">
@@ -234,63 +248,88 @@ Solicitar presupuesto GRATIS
 <div class="card">
 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 <h3>Limpieza de Viviendas</h3>
-<p>Limpieza completa de casas y apartamentos, incluyendo cocina, baños y superficies.</p>
+<p>Limpieza completa de casas y apartamentos.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
 <h3>Limpieza de Oficinas</h3>
-<p>Espacios de trabajo limpios, higienizados y organizados.</p>
+<p>Espacios de trabajo limpios y organizados.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
 <h3>Apartamentos Turísticos</h3>
-<p>Servicio rápido para Airbnb y alquiler vacacional.</p>
+<p>Servicio rápido para Airbnb.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
 <h3>Comunidades</h3>
-<p>Mantenimiento de zonas comunes y portales.</p>
+<p>Mantenimiento de zonas comunes.</p>
 </div>
 
 </div>
 </section>
 
-<!-- EMPRESA -->
-<section id="empresa">
-<h2>Empresa de Confianza</h2>
+<!-- EMPRESA CON FOTO -->
+<section id="empresa" class="flex fade-in">
 
-<p style="max-width:800px;margin:20px auto;">
-Equipo profesional, productos de calidad y resultados garantizados en toda la Costa del Sol.
+<img src="empresa.jpg" alt="Equipo Clean Málaga Costa">
+
+<div>
+<h2>Empresa de Confianza en Málaga</h2>
+
+<p>Equipo profesional, productos de calidad y resultados garantizados.</p>
+
+<p>
+✔ Atención rápida<br>
+✔ Servicio profesional<br>
+✔ Resultados garantizados
 </p>
 
+<a class="btn" href="https://wa.me/34602350840">
+Solicitar información
+</a>
+
+</div>
+
 </section>
 
-<!-- CTA -->
-<section id="contacto" class="cta">
+<!-- CONTACTO CON DOS BOTONES -->
+<section id="contacto" class="cta fade-in">
 <h2>Solicita tu presupuesto en 2 minutos</h2>
 
-<a class="btn" href="https://wa.me/34602350840?text=Hola,%20necesito%20limpieza">
-Contactar por WhatsApp
+<div style="margin-top:20px;">
+
+<a class="btn" href="https://wa.me/34602350840">
+WhatsApp
 </a>
+
+<a class="btn" href="mailto:cleanmalagacosta@gmail.com" style="background:#0ea5e9;margin-left:10px;">
+Email
+</a>
+
+</div>
+
 </section>
 
 <footer>
 © 2026 Clean Málaga Costa
 </footer>
 
-<a class="whatsapp" href="https://wa.me/34602350840?text=Hola,%20quiero%20información">
+<a class="whatsapp" href="https://wa.me/34602350840">
 WhatsApp
 </a>
 
 <script>
 
+// NAV SCROLL
 window.addEventListener("scroll", function(){
 document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 
+// MENU ACTIVO
 const sections = document.querySelectorAll("section");
 const links = document.querySelectorAll(".nav-link");
 
@@ -308,6 +347,19 @@ link.classList.add("active");
 }
 });
 });
+
+// ANIMACIÓN SCROLL
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+
+faders.forEach(el=>observer.observe(el));
 
 </script>
 
