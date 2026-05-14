@@ -3,143 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Costa Clean Málaga</title>
+<title>Costa Clean Málaga | Empresa de Limpieza</title>
 
 <style>
 body{
 margin:0;
 font-family:Segoe UI, Arial;
-scroll-behavior:smooth;
-background:#f4f7fb;
+background:#f4f6f8;
 color:#1f2937;
+}
+
+/* TOP BAR */
+.topbar{
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:space-between;
+padding:8px 20px;
+font-size:13px;
+}
+
+.topbar a{
+color:white;
+text-decoration:none;
+margin-left:10px;
 }
 
 /* NAV */
 nav{
-position:sticky;
-top:0;
-background:linear-gradient(90deg,#0ea5e9,#06b6d4);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
-z-index:1000;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 8px;
-font-weight:600;
+padding:14px 20px;
+background:white;
+border-bottom:3px solid #0ea5e9;
+flex-wrap:wrap;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
-color:white;
 font-weight:bold;
+color:#0ea5e9;
+font-size:18px;
 }
 
 .logo-icon{
-width:38px;
-height:38px;
-background:white;
+width:40px;
+height:40px;
+background:#0ea5e9;
 border-radius:10px;
 display:flex;
 align-items:center;
 justify-content:center;
+color:white;
+}
+
+/* MENU */
+.menu a{
+text-decoration:none;
+color:#1f2937;
+margin:0 10px;
+font-weight:600;
+font-size:14px;
+}
+
+.menu a:hover{
 color:#0ea5e9;
 }
 
-/* ===== SLIDER ===== */
-.slider-container{
-position:relative;
-height:520px;
-overflow:hidden;
-}
-
-.slider{
-display:flex;
-width:500%;
-height:100%;
-animation:slide 20s infinite;
-}
-
-.slider img{
-width:20%;
-height:520px;
-object-fit:cover;
-}
-
-/* animación */
-@keyframes slide{
-0%{transform:translateX(0);}
-20%{transform:translateX(0);}
-25%{transform:translateX(-20%);}
-45%{transform:translateX(-20%);}
-50%{transform:translateX(-40%);}
-70%{transform:translateX(-40%);}
-75%{transform:translateX(-60%);}
-95%{transform:translateX(-60%);}
-100%{transform:translateX(-80%);}
-}
-
-/* TEXTO PORTADA */
-.hero-text{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:rgba(0,0,0,0.45);
+/* BUTTON */
+.btn{
+background:#0ea5e9;
 color:white;
-padding:20px;
+padding:10px 15px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.hero-text h1{
+/* HERO */
+.hero{
+height:450px;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
 font-size:3rem;
 margin:0;
 }
 
-.hero-text p{
+.hero p{
 font-size:1.2rem;
-max-width:700px;
 }
 
-.btn{
-background:linear-gradient(90deg,#0ea5e9,#06b6d4);
-padding:12px 25px;
-color:white;
-text-decoration:none;
-border-radius:12px;
-margin-top:15px;
-font-weight:bold;
-}
-
-/* SECCIONES */
+/* SECTIONS */
 section{
-padding:70px 20px;
-max-width:1000px;
+padding:60px 20px;
+max-width:1100px;
 margin:auto;
 }
 
 h2{
 text-align:center;
 color:#0ea5e9;
+margin-bottom:20px;
 }
 
-/* CARD */
+/* CARDS */
 .card{
 background:white;
 padding:20px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 margin-top:15px;
 }
 
@@ -148,6 +132,15 @@ margin-top:15px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+}
+
+/* FOOTER */
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
 
 /* WHATSAPP */
@@ -167,86 +160,79 @@ font-weight:bold;
 
 <body>
 
-<!-- MENU -->
+<!-- TOP BAR -->
+<div class="topbar">
+<div>📍 Málaga y Costa del Sol</div>
+<div>
+<a href="#">Área Privada</a>
+<a href="#">Envía tu CV</a>
+<a href="#">ES</a>
+</div>
+</div>
+
+<!-- NAV -->
 <nav>
+
 <div class="logo">
 <div class="logo-icon">🏠</div>
 Costa Clean Málaga
 </div>
 
-<div>
-<a href="#inicio">Inicio</a>
-<a href="#empresa">Empresa</a>
-<a href="#oficinas">Oficinas</a>
-<a href="#servicios">Servicios</a>
-<a href="#presupuesto">Presupuesto</a>
+<div class="menu">
+<a href="#">Inicio</a>
+<a href="#">La Empresa</a>
+<a href="#">Oficinas</a>
+<a href="#">Multipunto</a>
+<a href="#">Servicios</a>
+<a href="#">Sectores</a>
+<a href="#">Delegaciones</a>
+<a href="#">Blog</a>
 </div>
+
+<a class="btn" href="https://wa.me/34602350840">Presupuesto</a>
+
 </nav>
 
-<!-- SLIDER PORTADA -->
-<section id="inicio" style="padding:0;">
-
-<div class="slider-container">
-
-<div class="slider">
-
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<img src="https://images.unsplash.com/photo-1603714228681-2e0b2c2b5b2a">
-<img src="https://images.unsplash.com/photo-1585421514738-01798e348b17">
-<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
-<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
-
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>Limpieza Profesional en Málaga</h1>
+<p>Casas • Oficinas • Comunidades • Apartamentos turísticos</p>
+<a class="btn" href="https://wa.me/34602350840">Solicitar presupuesto</a>
 </div>
-
-<div class="hero-text">
-<h1>Costa Clean Málaga</h1>
-<p>Limpieza profesional con materiales y equipos de alta calidad</p>
-<a class="btn" href="#presupuesto">Solicitar presupuesto</a>
 </div>
-
-</div>
-</section>
 
 <!-- EMPRESA -->
-<section id="empresa">
+<section>
 <h2>La Empresa</h2>
 <div class="card">
-Empresa de limpieza profesional en Málaga especializada en casas, oficinas y comunidades.
-</div>
-</section>
-
-<!-- OFICINAS -->
-<section id="oficinas">
-<h2>Limpieza de Oficinas</h2>
-
-<div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72" style="width:100%;border-radius:10px;">
-<p>Oficinas limpias y organizadas</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c" style="width:100%;border-radius:10px;">
-<p>Espacios profesionales</p>
-</div>
+Empresa de limpieza profesional con servicio en toda Málaga y Costa del Sol. Garantizamos calidad, rapidez y confianza.
 </div>
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios">
+<section>
 <h2>Servicios</h2>
-<div class="card">
-✔ Casas<br>
-✔ Oficinas<br>
-✔ Comunidades<br>
-✔ Apartamentos turísticos
+
+<div class="grid">
+<div class="card">🏠 Casas</div>
+<div class="card">🏢 Oficinas</div>
+<div class="card">🏘️ Comunidades</div>
+<div class="card">🏨 Apartamentos turísticos</div>
 </div>
 </section>
 
-<!-- PRESUPUESTO -->
-<section id="presupuesto">
-<h2>Presupuesto</h2>
+<!-- SECTORES -->
+<section>
+<h2>Sectores</h2>
+<div class="card">
+Trabajamos con empresas, particulares, comunidades y turismo en toda la Costa del Sol.
+</div>
+</section>
 
+<!-- CONTACTO -->
+<section>
+<h2>Contacto</h2>
 <div class="card">
 📱 WhatsApp: +34 602 350 840<br>
 📧 Email: cleanmalagacosta@gmail.com<br><br>
@@ -255,8 +241,13 @@ Empresa de limpieza profesional en Málaga especializada en casas, oficinas y co
 </div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+© 2026 Costa Clean Málaga - Todos los derechos reservados
+</footer>
+
 <!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/34602350840">💬 WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/34602350840">WhatsApp</a>
 
 </body>
 </html>
