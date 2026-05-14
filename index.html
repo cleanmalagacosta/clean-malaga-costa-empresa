@@ -6,8 +6,6 @@
 
 <title>Clean Málaga Costa | Empresa de Limpieza en Málaga</title>
 
-<meta name="description" content="Empresa de limpieza en Málaga para oficinas, viviendas y apartamentos turísticos. Presupuesto rápido por WhatsApp.">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -111,13 +109,26 @@ margin-top:30px;
 
 .card{
 background:white;
-padding:25px;
+padding:20px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:left;
+transition:0.3s;
 }
 
-/* FLEX SECTION */
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* FLEX */
 .flex{
 display:flex;
 gap:40px;
@@ -140,7 +151,7 @@ background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
 color:white;
 }
 
-/* DARK SECTION */
+/* DARK */
 .dark{
 background:#0b3c6f;
 color:white;
@@ -214,28 +225,32 @@ Solicitar presupuesto GRATIS
 </div>
 </section>
 
-<!-- SERVICIOS -->
+<!-- SERVICIOS CON IMÁGENES -->
 <section id="servicios">
-<h2>Servicios Profesionales</h2>
+<h2>Servicios Profesionales de Limpieza</h2>
 
 <div class="cards">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 <h3>Limpieza de Viviendas</h3>
 <p>Limpieza completa de casas y apartamentos, incluyendo cocina, baños y superficies.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
 <h3>Limpieza de Oficinas</h3>
 <p>Espacios de trabajo limpios, higienizados y organizados.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
 <h3>Apartamentos Turísticos</h3>
 <p>Servicio rápido para Airbnb y alquiler vacacional.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
 <h3>Comunidades</h3>
 <p>Mantenimiento de zonas comunes y portales.</p>
 </div>
@@ -251,64 +266,6 @@ Solicitar presupuesto GRATIS
 Equipo profesional, productos de calidad y resultados garantizados en toda la Costa del Sol.
 </p>
 
-<div class="cards">
-
-<div class="card"><h3>✔ Profesionalidad</h3></div>
-<div class="card"><h3>✔ Rapidez</h3></div>
-<div class="card"><h3>✔ Flexibilidad</h3></div>
-<div class="card"><h3>✔ Garantía</h3></div>
-
-</div>
-</section>
-
-<!-- PROCESO -->
-<section>
-<h2>¿Cómo trabajamos?</h2>
-
-<div class="cards">
-
-<div class="card"><h3>1. Contacto</h3></div>
-<div class="card"><h3>2. Evaluación</h3></div>
-<div class="card"><h3>3. Servicio</h3></div>
-<div class="card"><h3>4. Seguimiento</h3></div>
-
-</div>
-</section>
-
-<!-- IMAGEN -->
-<section class="flex">
-
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-
-<div>
-<h2>Compromiso con la calidad</h2>
-<p>Trabajamos con detalle para ofrecer un servicio profesional constante.</p>
-
-<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20información">
-Solicitar información
-</a>
-</div>
-
-</section>
-
-<!-- TESTIMONIOS -->
-<section>
-<h2>Opiniones</h2>
-
-<div class="cards">
-<div class="card">"Muy profesionales y rápidos"</div>
-<div class="card">"Perfecto para Airbnb"</div>
-<div class="card">"Repetiremos seguro"</div>
-</div>
-</section>
-
-<!-- FRANQUICIA -->
-<section class="dark">
-<h2>Clean Málaga Costa</h2>
-
-<p style="max-width:700px;margin:20px auto;">
-Servicio disponible en Málaga, Torremolinos, Benalmádena, Fuengirola y Marbella.
-</p>
 </section>
 
 <!-- CTA -->
@@ -330,12 +287,10 @@ WhatsApp
 
 <script>
 
-// NAV SCROLL
 window.addEventListener("scroll", function(){
 document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// ACTIVE MENU
 const sections = document.querySelectorAll("section");
 const links = document.querySelectorAll(".nav-link");
 
