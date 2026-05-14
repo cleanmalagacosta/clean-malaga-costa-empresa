@@ -91,10 +91,6 @@ background:#25D366;color:white;padding:15px 22px;
 border-radius:50px;font-weight:700;
 }
 
-input, select{
-padding:12px;margin:8px;border-radius:8px;border:none;
-}
-
 footer{
 background:#0b3c6f;color:white;padding:20px;text-align:center;
 }
@@ -111,14 +107,14 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 <!-- NAV -->
 <nav id="navbar">
 <div class="logo">
-<img src="./logo.png" alt="logo">
+<img src="logo.png" alt="logo">
 </div>
 
 <div>
 <a href="#inicio" class="nav-link">Inicio</a>
 <a href="#servicios" class="nav-link">Servicios</a>
 <a href="#empresa" class="nav-link">Empresa</a>
-<a href="#reserva" class="nav-link">Reserva</a>
+<a href="#reserva" class="nav-link">Reservar</a>
 </div>
 
 <div class="phone">📞 602 350 840</div>
@@ -137,7 +133,7 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 </p>
 
 <p style="font-weight:600;">
-Presupuesto en 2 minutos • Precios desde 49€
+Desde 49€ • Presupuesto gratis en 2 minutos
 </p>
 
 <a class="btn" href="#reserva" style="font-size:18px;">
@@ -147,7 +143,7 @@ RESERVAR AHORA
 <p style="margin-top:15px;">
 ⭐ Más de 50 clientes satisfechos<br>
 📍 Málaga y Costa del Sol<br>
-🕒 Respuesta rápida
+🕒 Respuesta en menos de 24h
 </p>
 
 </div>
@@ -190,13 +186,15 @@ RESERVAR AHORA
 <section id="empresa" class="flex">
 
 <div class="img-box">
-<img src="./empresa.jpg" alt="empresa">
+<img src="empresa.jpg" alt="empresa">
 </div>
 
 <div>
 <h2>Empresa de Confianza en Málaga</h2>
 
-<p>Empresa profesional con resultados garantizados y atención rápida.</p>
+<p>
+Empresa profesional con resultados garantizados y atención rápida.
+</p>
 
 <p>
 ✔ Atención rápida<br>
@@ -212,41 +210,44 @@ Reservar ahora
 
 </section>
 
-<!-- RESERVA PRO -->
+<!-- RESERVA -->
 <section id="reserva" class="cta">
 <h2>Reserva tu limpieza en 30 segundos</h2>
 
-<form onsubmit="calcularPrecio(); return false;">
+<form onsubmit="enviarWhatsApp(); return false;" style="margin-top:20px;">
 
-<input type="text" id="nombre" placeholder="Tu nombre" required>
+<input type="text" id="nombre" placeholder="Tu nombre" required 
+style="padding:12px;width:220px;margin:8px;border-radius:8px;border:none;">
 
-<input type="date" id="fecha" required>
+<input type="date" id="fecha" required 
+style="padding:12px;margin:8px;border-radius:8px;border:none;">
 
-<input type="time" id="hora" required>
-
-<select id="servicio" required>
-<option value="">Tipo de servicio</option>
-<option value="50">Apartamento Airbnb (50€)</option>
-<option value="60">Piso pequeño (60€)</option>
-<option value="75">Piso grande (75€)</option>
-<option value="100">Limpieza profunda (desde 100€)</option>
-</select>
-
-<input type="text" id="direccion" placeholder="Dirección" required>
+<input type="text" id="direccion" placeholder="Dirección" required 
+style="padding:12px;margin:8px;border-radius:8px;border:none;">
 
 <br>
 
-<button class="btn" type="submit">
-Ver precio y reservar
+<select id="servicio" required style="padding:12px;margin:8px;border-radius:8px;border:none;">
+<option value="">Selecciona servicio</option>
+<option value="50">Limpieza Airbnb - 50€</option>
+<option value="60">Piso pequeño - 60€</option>
+<option value="75">Piso grande - 75€</option>
+<option value="100">Limpieza profunda - 100€</option>
+</select>
+
+<br>
+
+<button class="btn" type="submit" style="font-size:18px;">
+Confirmar reserva y pagar
 </button>
 
-</form>
-
-<div id="resultado" style="margin-top:20px;font-weight:600;"></div>
-
-<p style="color:#fff;font-weight:600;">
-⚠️ Quedan pocos huecos disponibles esta semana
+<p style="margin-top:10px;font-size:14px;">
+✔ Reserva en 30 segundos<br>
+✔ Pago seguro<br>
+✔ Confirmación rápida
 </p>
+
+</form>
 
 </section>
 
@@ -254,11 +255,7 @@ Ver precio y reservar
 © 2026 Clean Málaga Costa
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" target="_blank"
-href="https://wa.me/34602350840?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20una%20limpieza%20en%20M%C3%A1laga">
-Reservar
-</a>
+<a class="whatsapp" href="https://wa.me/34602350840">WhatsApp</a>
 
 <script>
 
@@ -266,40 +263,50 @@ window.addEventListener("scroll", function(){
 document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// bloquear fechas pasadas
-const hoy = new Date().toISOString().split("T")[0];
-document.getElementById("fecha").setAttribute("min", hoy);
-
-// sistema automático
-function calcularPrecio(){
+function enviarWhatsApp(){
 
 let nombre = document.getElementById("nombre").value;
 let fecha = document.getElementById("fecha").value;
-let hora = document.getElementById("hora").value;
-let servicio = document.getElementById("servicio").value;
 let direccion = document.getElementById("direccion").value;
+let servicio = document.getElementById("servicio").value;
 
-if(!servicio){
-alert("Selecciona un servicio");
-return;
+let linkPago = "";
+let nombreServicio = "";
+
+if(servicio == "50"){
+linkPago = "https://buy.stripe.com/fZu4gyeKBcnK03R5wm6J200";
+nombreServicio = "Limpieza Airbnb";
+}
+if(servicio == "60"){
+linkPago = "https://buy.stripe.com/14AbJ08mdfzWg2PbUK6J201";
+nombreServicio = "Piso pequeño";
+}
+if(servicio == "75"){
+linkPago = "https://buy.stripe.com/7sY6oG7i9fzW4k7cYO6J202";
+nombreServicio = "Piso grande";
+}
+if(servicio == "100"){
+linkPago = "https://buy.stripe.com/7sY28q45X0F217V9MC6J203";
+nombreServicio = "Limpieza profunda";
 }
 
-document.getElementById("resultado").innerHTML =
-"💰 Precio estimado: " + servicio + "€";
+// GUARDAR EN GOOGLE SHEETS
+fetch("https://docs.google.com/forms/d/e/1FAIpQLSfpUe0MMzBs0bk1uIV_6Ep4rz4ca_gzQASUWoKysRPBf7MsOQ/formResponse", {
+method: "POST",
+mode: "no-cors",
+headers: {
+"Content-Type": "application/x-www-form-urlencoded"
+},
+body:
+`entry.872503838=${nombre}&entry.235124891=${fecha}&entry.161976741=${direccion}&entry.1689905156=${nombreServicio}`
+});
 
-let mensaje = `Hola, quiero reservar una limpieza:
-
-👤 Nombre: ${nombre}
-📅 Fecha: ${fecha}
-⏰ Hora: ${hora}
-🧹 Servicio: ${servicio}€
-📍 Dirección: ${direccion}
-
-He visto el precio en la web, ¿podéis confirmarme disponibilidad?`;
-
-setTimeout(() => {
+// WHATSAPP
+let mensaje = `Nueva reserva:\n\n👤 ${nombre}\n📅 ${fecha}\n📍 ${direccion}\n🧼 ${nombreServicio}`;
 window.open(`https://wa.me/34602350840?text=${encodeURIComponent(mensaje)}`, '_blank');
-}, 800);
+
+// PAGO
+window.location.href = linkPago;
 
 }
 
