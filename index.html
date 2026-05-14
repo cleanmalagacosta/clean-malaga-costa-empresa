@@ -37,7 +37,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 .logo img{
-height:40px;
+height:45px;
 object-fit:contain;
 background:white;
 padding:5px;
@@ -94,7 +94,7 @@ padding:14px 30px;
 border-radius:10px;
 text-decoration:none;
 display:inline-block;
-transition:all 0.3s ease;
+transition:0.3s;
 box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
@@ -122,6 +122,11 @@ padding:20px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:left;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
 }
 
 .card img{
@@ -141,26 +146,12 @@ flex-wrap:wrap;
 }
 
 .img-box{
-position:relative;
 width:45%;
 }
 
 .img-box img{
 width:100%;
 border-radius:15px;
-}
-
-.logo-overlay{
-position:absolute;
-bottom:15px;
-left:15px;
-background:rgba(0,0,0,0.5);
-padding:8px 12px;
-border-radius:8px;
-}
-
-.logo-overlay img{
-height:35px;
 }
 
 .flex div{
@@ -206,7 +197,7 @@ width:100%;
 <!-- NAV -->
 <nav id="navbar">
 <div class="logo">
-<img src="./logo.png?v=2" alt="logo">
+<img src="./logo.png?v=3" alt="logo">
 </div>
 
 <div>
@@ -224,7 +215,11 @@ width:100%;
 <div class="hero-content">
 <h1>Limpieza Profesional en Málaga en 24h</h1>
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
-<a class="btn" href="https://wa.me/34602350840">Solicitar presupuesto GRATIS</a>
+
+<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20presupuesto">
+Solicitar presupuesto GRATIS
+</a>
+
 </div>
 </section>
 
@@ -265,12 +260,7 @@ width:100%;
 <section id="empresa" class="flex">
 
 <div class="img-box">
-<img src="./empresa.jpg?v=2" alt="empresa">
-
-<div class="logo-overlay">
-<img src="./logo.png?v=2">
-</div>
-
+<img src="./empresa.jpg?v=3" alt="empresa">
 </div>
 
 <div>
@@ -283,7 +273,10 @@ width:100%;
 ✔ Resultados garantizados
 </p>
 
-<a class="btn" href="https://wa.me/34602350840">Solicitar información</a>
+<a class="btn" href="https://wa.me/34602350840">
+Solicitar información
+</a>
+
 </div>
 
 </section>
@@ -293,8 +286,15 @@ width:100%;
 <h2>Solicita tu presupuesto en 2 minutos</h2>
 
 <div style="margin-top:20px;">
-<a class="btn" href="https://wa.me/34602350840">WhatsApp</a>
-<a class="btn" href="mailto:cleanmalagacosta@gmail.com" style="background:#0ea5e9;margin-left:10px;">Email</a>
+
+<a class="btn" href="https://wa.me/34602350840">
+WhatsApp
+</a>
+
+<a class="btn" href="mailto:cleanmalagacosta@gmail.com" style="background:#0ea5e9;margin-left:10px;">
+Email
+</a>
+
 </div>
 
 </section>
@@ -303,7 +303,9 @@ width:100%;
 © 2026 Clean Málaga Costa
 </footer>
 
-<a class="whatsapp" href="https://wa.me/34602350840">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/34602350840">
+WhatsApp
+</a>
 
 <script>
 window.addEventListener("scroll", function(){
