@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
 
@@ -17,11 +16,9 @@ body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
 position:fixed;width:100%;display:flex;justify-content:space-between;
 align-items:center;padding:20px 60px;z-index:1000;
 }
-
 #navbar.scrolled{background:#0b3c6f;}
 
 .logo img{height:50px;}
-
 .nav-link{color:white;margin:0 15px;text-decoration:none;}
 
 .phone{
@@ -35,13 +32,10 @@ background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') c
 display:flex;align-items:center;justify-content:center;
 text-align:center;color:white;position:relative;
 }
-
 .hero::before{
 content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6);
 }
-
 .hero-content{position:relative;max-width:800px;}
-
 .hero h1{font-size:48px;margin-bottom:20px;}
 
 .btn{
@@ -72,10 +66,8 @@ width:100%;height:180px;object-fit:cover;border-radius:10px;
 .flex{
 display:flex;gap:40px;align-items:center;flex-wrap:wrap;
 }
-
 .img-box{width:45%;}
 .img-box img{width:100%;border-radius:15px;}
-
 .flex div{width:45%;}
 
 /* CTA */
@@ -98,7 +90,6 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 @media(max-width:900px){
 .img-box,.flex div{width:100%;}
 }
-
 </style>
 </head>
 
@@ -129,15 +120,15 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
 
 <p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
-🔥 Solo 3 huecos disponibles esta semana
+🔥 Alta demanda: quedan pocas citas disponibles
 </p>
 
 <p style="font-weight:600;">
 Desde 49€ • Presupuesto gratis en 2 minutos
 </p>
 
-<a class="btn" href="#reserva" style="font-size:18px;">
-RESERVAR AHORA
+<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="font-size:18px;">
+VER DISPONIBILIDAD Y RESERVAR
 </a>
 
 <p style="margin-top:15px;">
@@ -202,7 +193,7 @@ Empresa profesional con resultados garantizados y atención rápida.
 ✔ Resultados garantizados
 </p>
 
-<a class="btn" href="#reserva">
+<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank">
 Reservar ahora
 </a>
 
@@ -212,42 +203,55 @@ Reservar ahora
 
 <!-- RESERVA -->
 <section id="reserva" class="cta">
-<h2>Reserva tu limpieza en 30 segundos</h2>
+<h2>Reserva tu limpieza en 1 minuto</h2>
 
-<form onsubmit="enviarWhatsApp(); return false;" style="margin-top:20px;">
-
-<input type="text" id="nombre" placeholder="Tu nombre" required 
-style="padding:12px;width:220px;margin:8px;border-radius:8px;border:none;">
-
-<input type="date" id="fecha" required 
-style="padding:12px;margin:8px;border-radius:8px;border:none;">
-
-<input type="text" id="direccion" placeholder="Dirección" required 
-style="padding:12px;margin:8px;border-radius:8px;border:none;">
-
-<br>
-
-<select id="servicio" required style="padding:12px;margin:8px;border-radius:8px;border:none;">
-<option value="">Selecciona servicio</option>
-<option value="50">Limpieza Airbnb - 50€</option>
-<option value="60">Piso pequeño - 60€</option>
-<option value="75">Piso grande - 75€</option>
-<option value="100">Limpieza profunda - 100€</option>
-</select>
-
-<br>
-
-<button class="btn" type="submit" style="font-size:18px;">
-Confirmar reserva y pagar
-</button>
-
-<p style="margin-top:10px;font-size:14px;">
-✔ Reserva en 30 segundos<br>
-✔ Pago seguro<br>
-✔ Confirmación rápida
+<p style="margin-top:15px;">
+1️⃣ Elige fecha disponible<br>
+2️⃣ Completa tus datos<br>
+3️⃣ Realiza el pago para confirmar
 </p>
 
-</form>
+<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="font-size:18px;">
+Ver disponibilidad y reservar
+</a>
+
+<p style="margin-top:15px;font-size:14px;">
+✔ Calendario en tiempo real<br>
+✔ Confirmación tras pago<br>
+✔ Servicio garantizado
+</p>
+
+</section>
+
+<!-- PAGO -->
+<section id="pago" class="cta">
+<h2>Selecciona tu servicio y paga</h2>
+
+<div style="margin-top:20px;">
+
+<a class="btn" href="https://buy.stripe.com/fZu4gyeKBcnK03R5wm6J200" target="_blank">
+Airbnb - 50€
+</a>
+
+<a class="btn" href="https://buy.stripe.com/14AbJ08mdfzWg2PbUK6J201" target="_blank">
+Piso pequeño - 60€
+</a>
+
+<a class="btn" href="https://buy.stripe.com/7sY6oG7i9fzW4k7cYO6J202" target="_blank">
+Piso grande - 75€
+</a>
+
+<a class="btn" href="https://buy.stripe.com/7sY28q45X0F217V9MC6J203" target="_blank">
+Limpieza profunda - 100€
+</a>
+
+</div>
+
+<p style="margin-top:15px;font-size:14px;">
+✔ Pago seguro con tarjeta<br>
+✔ Confirmación automática por email<br>
+✔ Atención en menos de 24h
+</p>
 
 </section>
 
@@ -258,58 +262,9 @@ Confirmar reserva y pagar
 <a class="whatsapp" href="https://wa.me/34602350840">WhatsApp</a>
 
 <script>
-
 window.addEventListener("scroll", function(){
 document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
-
-function enviarWhatsApp(){
-
-let nombre = document.getElementById("nombre").value;
-let fecha = document.getElementById("fecha").value;
-let direccion = document.getElementById("direccion").value;
-let servicio = document.getElementById("servicio").value;
-
-let linkPago = "";
-let nombreServicio = "";
-
-if(servicio == "50"){
-linkPago = "https://buy.stripe.com/fZu4gyeKBcnK03R5wm6J200";
-nombreServicio = "Limpieza Airbnb";
-}
-if(servicio == "60"){
-linkPago = "https://buy.stripe.com/14AbJ08mdfzWg2PbUK6J201";
-nombreServicio = "Piso pequeño";
-}
-if(servicio == "75"){
-linkPago = "https://buy.stripe.com/7sY6oG7i9fzW4k7cYO6J202";
-nombreServicio = "Piso grande";
-}
-if(servicio == "100"){
-linkPago = "https://buy.stripe.com/7sY28q45X0F217V9MC6J203";
-nombreServicio = "Limpieza profunda";
-}
-
-// GUARDAR EN GOOGLE SHEETS
-fetch("https://docs.google.com/forms/d/e/1FAIpQLSfpUe0MMzBs0bk1uIV_6Ep4rz4ca_gzQASUWoKysRPBf7MsOQ/formResponse", {
-method: "POST",
-mode: "no-cors",
-headers: {
-"Content-Type": "application/x-www-form-urlencoded"
-},
-body:
-`entry.872503838=${nombre}&entry.235124891=${fecha}&entry.161976741=${direccion}&entry.1689905156=${nombreServicio}`
-});
-
-// WHATSAPP
-let mensaje = `Nueva reserva:\n\n👤 ${nombre}\n📅 ${fecha}\n📍 ${direccion}\n🧼 ${nombreServicio}`;
-window.open(`https://wa.me/34602350840?text=${encodeURIComponent(mensaje)}`, '_blank');
-
-// PAGO
-window.location.href = linkPago;
-
-}
-
 </script>
 
 </body>
