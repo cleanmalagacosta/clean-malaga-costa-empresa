@@ -36,7 +36,13 @@ background:#0b3c6f;
 box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
-.logo{color:white;font-weight:700;}
+.logo img{
+height:40px;
+object-fit:contain;
+background:white;
+padding:5px;
+border-radius:8px;
+}
 
 .nav-link{
 color:white;
@@ -80,7 +86,7 @@ max-width:800px;
 .hero h1{font-size:48px;margin-bottom:20px;}
 .hero p{margin-bottom:20px;}
 
-/* BOTONES PREMIUM */
+/* BOTONES */
 .btn{
 background:#ef4444;
 color:white;
@@ -97,17 +103,6 @@ transform:translateY(-4px);
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-.urgency{
-margin-top:10px;
-font-size:14px;
-}
-
-/* SECTIONS */
-section{
-padding:80px 10%;
-text-align:center;
-}
-
 /* ANIMACIONES */
 .fade-in{
 opacity:0;
@@ -118,6 +113,12 @@ transition:all 0.8s ease;
 .fade-in.visible{
 opacity:1;
 transform:translateY(0);
+}
+
+/* SECTIONS */
+section{
+padding:80px 10%;
+text-align:center;
 }
 
 .cards{
@@ -149,7 +150,7 @@ border-radius:10px;
 margin-bottom:15px;
 }
 
-/* FLEX EMPRESA */
+/* EMPRESA */
 .flex{
 display:flex;
 gap:40px;
@@ -157,9 +158,28 @@ align-items:center;
 flex-wrap:wrap;
 }
 
-.flex img{
+.img-box{
+position:relative;
 width:45%;
+}
+
+.img-box img{
+width:100%;
 border-radius:15px;
+}
+
+.logo-overlay{
+position:absolute;
+bottom:15px;
+left:15px;
+background:rgba(0,0,0,0.5);
+padding:8px 12px;
+border-radius:8px;
+z-index:2;
+}
+
+.logo-overlay img{
+height:35px;
 }
 
 .flex div{
@@ -199,7 +219,7 @@ text-align:center;
 }
 
 @media(max-width:900px){
-.flex img,.flex div{
+.img-box,.flex div{
 width:100%;
 }
 }
@@ -211,7 +231,9 @@ width:100%;
 
 <!-- NAV -->
 <nav id="navbar">
-<div class="logo">Clean Málaga Costa</div>
+<div class="logo">
+<img src="logo.png" alt="Clean Málaga Costa">
+</div>
 
 <div>
 <a href="#inicio" class="nav-link">Inicio</a>
@@ -230,36 +252,34 @@ width:100%;
 <h1>Limpieza Profesional en Málaga en 24h</h1>
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
 
-<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20presupuesto">
+<a class="btn" href="https://wa.me/34602350840">
 Solicitar presupuesto GRATIS
 </a>
-
-<p class="urgency">🔥 Últimos huecos disponibles esta semana</p>
 
 </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios" class="fade-in">
-<h2>Servicios Profesionales de Limpieza</h2>
+<h2>Servicios Profesionales</h2>
 
 <div class="cards">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<h3>Limpieza de Viviendas</h3>
+<h3>Viviendas</h3>
 <p>Limpieza completa de casas y apartamentos.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
-<h3>Limpieza de Oficinas</h3>
+<h3>Oficinas</h3>
 <p>Espacios de trabajo limpios y organizados.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
-<h3>Apartamentos Turísticos</h3>
+<h3>Apartamentos</h3>
 <p>Servicio rápido para Airbnb.</p>
 </div>
 
@@ -272,10 +292,17 @@ Solicitar presupuesto GRATIS
 </div>
 </section>
 
-<!-- EMPRESA CON FOTO -->
+<!-- EMPRESA -->
 <section id="empresa" class="flex fade-in">
 
-<img src="empresa.jpg" alt="Equipo Clean Málaga Costa">
+<div class="img-box">
+<img src="empresa.jpg" alt="Empresa de limpieza en Málaga">
+
+<div class="logo-overlay">
+<img src="logo.png" alt="logo">
+</div>
+
+</div>
 
 <div>
 <h2>Empresa de Confianza en Málaga</h2>
@@ -296,7 +323,7 @@ Solicitar información
 
 </section>
 
-<!-- CONTACTO CON DOS BOTONES -->
+<!-- CONTACTO -->
 <section id="contacto" class="cta fade-in">
 <h2>Solicita tu presupuesto en 2 minutos</h2>
 
@@ -329,26 +356,7 @@ window.addEventListener("scroll", function(){
 document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// MENU ACTIVO
-const sections = document.querySelectorAll("section");
-const links = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-let current="";
-sections.forEach(sec=>{
-if(pageYOffset>=sec.offsetTop-100){
-current=sec.id;
-}
-});
-links.forEach(link=>{
-link.classList.remove("active");
-if(link.getAttribute("href")=="#"+current){
-link.classList.add("active");
-}
-});
-});
-
-// ANIMACIÓN SCROLL
+// ANIMACIONES
 const faders = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver(entries=>{
