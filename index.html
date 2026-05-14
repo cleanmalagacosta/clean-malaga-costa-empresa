@@ -91,6 +91,10 @@ background:#25D366;color:white;padding:15px 22px;
 border-radius:50px;font-weight:700;
 }
 
+input, select{
+padding:12px;margin:8px;border-radius:8px;border:none;
+}
+
 footer{
 background:#0b3c6f;color:white;padding:20px;text-align:center;
 }
@@ -107,14 +111,14 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 <!-- NAV -->
 <nav id="navbar">
 <div class="logo">
-<img src="logo.png" alt="logo">
+<img src="./logo.png" alt="logo">
 </div>
 
 <div>
 <a href="#inicio" class="nav-link">Inicio</a>
 <a href="#servicios" class="nav-link">Servicios</a>
 <a href="#empresa" class="nav-link">Empresa</a>
-<a href="#contacto" class="nav-link">Contacto</a>
+<a href="#reserva" class="nav-link">Reserva</a>
 </div>
 
 <div class="phone">📞 602 350 840</div>
@@ -128,25 +132,22 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
 
-<!-- URGENCIA -->
 <p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
 🔥 Solo 3 huecos disponibles esta semana
 </p>
 
-<!-- PRECIO -->
 <p style="font-weight:600;">
-Desde 49€ • Presupuesto gratis en 2 minutos
+Presupuesto en 2 minutos • Precios desde 49€
 </p>
 
-<!-- BOTÓN PRINCIPAL -->
-<a class="btn" href="#reserva">
+<a class="btn" href="#reserva" style="font-size:18px;">
 RESERVAR AHORA
 </a>
 
 <p style="margin-top:15px;">
 ⭐ Más de 50 clientes satisfechos<br>
 📍 Málaga y Costa del Sol<br>
-🕒 Respuesta en menos de 24h
+🕒 Respuesta rápida
 </p>
 
 </div>
@@ -189,15 +190,13 @@ RESERVAR AHORA
 <section id="empresa" class="flex">
 
 <div class="img-box">
-<img src="empresa.jpg" alt="empresa">
+<img src="./empresa.jpg" alt="empresa">
 </div>
 
 <div>
 <h2>Empresa de Confianza en Málaga</h2>
 
-<p>
-Empresa profesional con resultados garantizados y atención rápida.
-</p>
+<p>Empresa profesional con resultados garantizados y atención rápida.</p>
 
 <p>
 ✔ Atención rápida<br>
@@ -213,31 +212,41 @@ Reservar ahora
 
 </section>
 
-<!-- TESTIMONIOS REALES -->
-<section>
-<h2>Opiniones de clientes</h2>
-
-<p>⭐⭐⭐⭐⭐ “Servicio perfecto y rápido” – Juan (Málaga)</p>
-<p>⭐⭐⭐⭐⭐ “Mi Airbnb quedó impecable” – María</p>
-<p>⭐⭐⭐⭐⭐ “Muy profesionales” – Carlos</p>
-
-</section>
-
-<!-- RESERVA -->
+<!-- RESERVA PRO -->
 <section id="reserva" class="cta">
 <h2>Reserva tu limpieza en 30 segundos</h2>
 
-<form onsubmit="enviarWhatsApp(); return false;" style="margin-top:20px;">
+<form onsubmit="calcularPrecio(); return false;">
 
-<input type="text" id="nombre" placeholder="Tu nombre" required style="padding:10px;width:200px;margin:5px;">
-<input type="date" id="fecha" required style="padding:10px;margin:5px;">
-<input type="text" id="direccion" placeholder="Dirección" required style="padding:10px;margin:5px;">
+<input type="text" id="nombre" placeholder="Tu nombre" required>
+
+<input type="date" id="fecha" required>
+
+<input type="time" id="hora" required>
+
+<select id="servicio" required>
+<option value="">Tipo de servicio</option>
+<option value="50">Apartamento Airbnb (50€)</option>
+<option value="60">Piso pequeño (60€)</option>
+<option value="75">Piso grande (75€)</option>
+<option value="100">Limpieza profunda (desde 100€)</option>
+</select>
+
+<input type="text" id="direccion" placeholder="Dirección" required>
 
 <br>
 
-<button class="btn" type="submit">Enviar por WhatsApp</button>
+<button class="btn" type="submit">
+Ver precio y reservar
+</button>
 
 </form>
+
+<div id="resultado" style="margin-top:20px;font-weight:600;"></div>
+
+<p style="color:#fff;font-weight:600;">
+⚠️ Quedan pocos huecos disponibles esta semana
+</p>
 
 </section>
 
@@ -245,24 +254,53 @@ Reservar ahora
 © 2026 Clean Málaga Costa
 </footer>
 
-<a class="whatsapp" href="https://wa.me/34602350840">WhatsApp</a>
+<!-- WHATSAPP -->
+<a class="whatsapp" target="_blank"
+href="https://wa.me/34602350840?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20una%20limpieza%20en%20M%C3%A1laga">
+Reservar
+</a>
 
 <script>
 
-// NAV SCROLL
 window.addEventListener("scroll", function(){
 document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// WHATSAPP FORM
-function enviarWhatsApp(){
+// bloquear fechas pasadas
+const hoy = new Date().toISOString().split("T")[0];
+document.getElementById("fecha").setAttribute("min", hoy);
+
+// sistema automático
+function calcularPrecio(){
+
 let nombre = document.getElementById("nombre").value;
 let fecha = document.getElementById("fecha").value;
+let hora = document.getElementById("hora").value;
+let servicio = document.getElementById("servicio").value;
 let direccion = document.getElementById("direccion").value;
 
-let mensaje = `Hola, quiero reservar limpieza:\nNombre: ${nombre}\nFecha: ${fecha}\nDirección: ${direccion}`;
+if(!servicio){
+alert("Selecciona un servicio");
+return;
+}
 
+document.getElementById("resultado").innerHTML =
+"💰 Precio estimado: " + servicio + "€";
+
+let mensaje = `Hola, quiero reservar una limpieza:
+
+👤 Nombre: ${nombre}
+📅 Fecha: ${fecha}
+⏰ Hora: ${hora}
+🧹 Servicio: ${servicio}€
+📍 Dirección: ${direccion}
+
+He visto el precio en la web, ¿podéis confirmarme disponibilidad?`;
+
+setTimeout(() => {
 window.open(`https://wa.me/34602350840?text=${encodeURIComponent(mensaje)}`, '_blank');
+}, 800);
+
 }
 
 </script>
