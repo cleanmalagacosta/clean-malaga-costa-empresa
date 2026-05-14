@@ -1,190 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Costa Clean Málaga | Empresa de Limpieza</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Costa Clean Málaga | Empresa de Limpieza</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#f5f7fa;
+  color:#1f2937;
+}
 
-    body{
-      background:#f5f7fa;
-      color:#1f2937;
-    }
+/* SLIDER */
+header{
+  position:relative;
+  overflow:hidden;
+  height:500px;
+}
 
-    header{
-      background:linear-gradient(135deg,#0ea5e9,#0369a1);
-      color:white;
-      padding:90px 20px;
-      text-align:center;
-    }
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:1s;
+}
 
-    header h1{
-      font-size:2.8rem;
-      margin-bottom:10px;
-    }
+.slide.active{
+  opacity:1;
+}
 
-    header p{
-      font-size:1.2rem;
-      max-width:700px;
-      margin:0 auto;
-    }
+/* TEXTO HEADER */
+.header-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:white;
+  width:90%;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:25px;
-      padding:14px 28px;
-      background:white;
-      color:#0369a1;
-      text-decoration:none;
-      border-radius:10px;
-      font-weight:bold;
-    }
+.header-content h1{
+  font-size:3rem;
+  font-weight:800;
+}
 
-    .btn:hover{
-      background:#e0f2fe;
-    }
+.header-content p{
+  font-size:1.3rem;
+  max-width:700px;
+  margin:20px auto;
+}
 
-    section{
-      padding:60px 20px;
-      max-width:1100px;
-      margin:auto;
-    }
+/* BOTÓN */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  background:white;
+  color:#0369a1;
+  border-radius:10px;
+  font-weight:bold;
+  text-decoration:none;
+}
 
-    h2{
-      text-align:center;
-      margin-bottom:30px;
-      font-size:2rem;
-      color:#0369a1;
-    }
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
+h2{
+  text-align:center;
+  color:#0369a1;
+  margin-bottom:30px;
+}
 
-    .card{
-      background:white;
-      padding:25px;
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.08);
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    .card h3{
-      margin-bottom:10px;
-      color:#0284c7;
-    }
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
 
-    .center{
-      text-align:center;
-      max-width:800px;
-      margin:auto;
-      font-size:1.1rem;
-    }
+.contact{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
 
-    .contact{
-      background:white;
-      padding:30px;
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.08);
-      text-align:center;
-    }
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 
-    footer{
-      background:#0f172a;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:40px;
-    }
-  </style>
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
+<!-- SLIDER HEADER -->
 <header>
-  <h1>Costa Clean Málaga</h1>
-  <p>Empresa de limpieza profesional en Málaga y Costa del Sol. Especialistas en casas, apartamentos turísticos y comunidades.</p>
 
-  <a class="btn" href="https://wa.me/34602350840">
-    Solicitar presupuesto
-  </a>
-</header>
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1585421514738-01798e348b17');"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac');"></div>
 
-<section>
-  <h2>Servicios</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>🏠 Casas</h3>
-      <p>Limpieza completa de viviendas particulares, puntual o periódica.</p>
-    </div>
-
-    <div class="card">
-      <h3>🏢 Apartamentos turísticos</h3>
-      <p>Limpieza rápida para Airbnb entre check-in y check-out.</p>
-    </div>
-
-    <div class="card">
-      <h3>🏘️ Comunidades</h3>
-      <p>Mantenimiento de portales, escaleras y zonas comunes.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>¿Por qué elegirnos?</h2>
-
-  <div class="center">
-    <p>
-      ✔ Servicio rápido y fiable<br>
-      ✔ Precios competitivos<br>
-      ✔ Atención personalizada<br>
-      ✔ Trabajo profesional y garantizado
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>Sobre nosotros</h2>
-
-  <div class="center">
-    <p>
-      Somos una empresa de limpieza en Málaga enfocada en ofrecer un servicio serio, eficiente y de confianza en toda la Costa del Sol.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>Contacto</h2>
-
-  <div class="contact">
-    <p><strong>WhatsApp :</strong> +34 602 350 840</p>
-
-    <p><strong>E-mail :</strong> 
-      <a href="mailto:cleanmalagacosta@gmail.com">
-        cleanmalagacosta@gmail.com
-      </a>
-    </p>
-
-    <p><strong>Zona :</strong> Málaga et Costa del Sol</p>
+  <div class="header-content">
+    <h1>Costa Clean Málaga</h1>
+    <p>Limpieza profesional de casas, apartamentos turísticos y comunidades en Málaga y Costa del Sol.</p>
 
     <a class="btn" href="https://wa.me/34602350840">
-      Demander un devis
+      Solicitar presupuesto
     </a>
   </div>
+
+</header>
+
+<!-- SERVICIOS -->
+<section>
+<h2>Servicios</h2>
+
+<div class="grid">
+  <div class="card">
+    <h3>🏠 Casas</h3>
+    <p>Limpieza completa de viviendas particulares.</p>
+  </div>
+
+  <div class="card">
+    <h3>🏢 Airbnb</h3>
+    <p>Limpieza rápida entre check-in y check-out.</p>
+  </div>
+
+  <div class="card">
+    <h3>🏘️ Comunidades</h3>
+    <p>Mantenimiento de portales y zonas comunes.</p>
+  </div>
+</div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section>
+<h2>¿Por qué elegirnos?</h2>
+
+<div class="grid">
+  <div class="card">✔ Rápidos y fiables</div>
+  <div class="card">✔ Precios competitivos</div>
+  <div class="card">✔ Trabajo profesional</div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section>
+<h2>Contacto</h2>
+
+<div class="contact">
+<p>📱 WhatsApp: +34 602 350 840</p>
+<p>📧 Email: cleanmalagacosta@gmail.com</p>
+<p>📍 Málaga y Costa del Sol</p>
+
+<a class="btn" href="https://wa.me/34602350840">
+  Contactar por WhatsApp
+</a>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Costa Clean Málaga - Todos los derechos reservados</p>
+© 2026 Costa Clean Málaga
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/34602350840">
+💬 WhatsApp
+</a>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
 
 </body>
 </html>
