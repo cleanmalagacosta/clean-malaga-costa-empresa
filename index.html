@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
 
@@ -16,9 +17,11 @@ body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
 position:fixed;width:100%;display:flex;justify-content:space-between;
 align-items:center;padding:20px 60px;z-index:1000;
 }
+
 #navbar.scrolled{background:#0b3c6f;}
 
 .logo img{height:50px;}
+
 .nav-link{color:white;margin:0 15px;text-decoration:none;}
 
 .phone{
@@ -32,10 +35,13 @@ background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') c
 display:flex;align-items:center;justify-content:center;
 text-align:center;color:white;position:relative;
 }
+
 .hero::before{
 content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6);
 }
+
 .hero-content{position:relative;max-width:800px;}
+
 .hero h1{font-size:48px;margin-bottom:20px;}
 
 .btn{
@@ -66,8 +72,10 @@ width:100%;height:180px;object-fit:cover;border-radius:10px;
 .flex{
 display:flex;gap:40px;align-items:center;flex-wrap:wrap;
 }
+
 .img-box{width:45%;}
 .img-box img{width:100%;border-radius:15px;}
+
 .flex div{width:45%;}
 
 /* CTA */
@@ -90,6 +98,7 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 @media(max-width:900px){
 .img-box,.flex div{width:100%;}
 }
+
 </style>
 </head>
 
@@ -105,7 +114,7 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 <a href="#inicio" class="nav-link">Inicio</a>
 <a href="#servicios" class="nav-link">Servicios</a>
 <a href="#empresa" class="nav-link">Empresa</a>
-<a href="#reserva" class="nav-link">Reservar</a>
+<a href="#reserva" class="nav-link">Reserva</a>
 </div>
 
 <div class="phone">📞 602 350 840</div>
@@ -120,15 +129,15 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
 
 <p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
-🔥 Alta demanda: quedan pocas citas disponibles
+🔥 Solo 3 huecos disponibles esta semana
 </p>
 
 <p style="font-weight:600;">
-Desde 49€ • Presupuesto gratis en 2 minutos
+Desde 49€ • Reserva solo con pago confirmado
 </p>
 
-<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="font-size:18px;">
-VER DISPONIBILIDAD Y RESERVAR
+<a class="btn" href="#reserva" style="font-size:18px;">
+RESERVAR AHORA
 </a>
 
 <p style="margin-top:15px;">
@@ -193,7 +202,7 @@ Empresa profesional con resultados garantizados y atención rápida.
 ✔ Resultados garantizados
 </p>
 
-<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank">
+<a class="btn" href="#reserva">
 Reservar ahora
 </a>
 
@@ -203,55 +212,48 @@ Reservar ahora
 
 <!-- RESERVA -->
 <section id="reserva" class="cta">
+
 <h2>Reserva tu limpieza en 1 minuto</h2>
 
-<p style="margin-top:15px;">
-1️⃣ Elige fecha disponible<br>
-2️⃣ Completa tus datos<br>
-3️⃣ Realiza el pago para confirmar
+<p>
+1️⃣ Elige tu servicio<br>
+2️⃣ Realiza el pago<br>
+3️⃣ Reserva tu fecha
 </p>
 
-<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="font-size:18px;">
-Ver disponibilidad y reservar
-</a>
-
-<p style="margin-top:15px;font-size:14px;">
-✔ Calendario en tiempo real<br>
-✔ Confirmación tras pago<br>
-✔ Servicio garantizado
+<p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
+⚠️ Reserva solo válida tras pago
 </p>
 
-</section>
-
-<!-- PAGO -->
-<section id="pago" class="cta">
-<h2>Selecciona tu servicio y paga</h2>
-
-<div style="margin-top:20px;">
+<div>
 
 <a class="btn" href="https://buy.stripe.com/fZu4gyeKBcnK03R5wm6J200" target="_blank">
-Airbnb - 50€
-</a>
+🧼 Airbnb - 50€
+</a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/14AbJ08mdfzWg2PbUK6J201" target="_blank">
-Piso pequeño - 60€
-</a>
+🏠 Vivienda - 80€
+</a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/7sY6oG7i9fzW4k7cYO6J202" target="_blank">
-Piso grande - 75€
-</a>
+🏢 Oficina - 100€
+</a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/7sY28q45X0F217V9MC6J203" target="_blank">
-Limpieza profunda - 100€
+✨ Profunda - 150€
 </a>
 
 </div>
 
-<p style="margin-top:15px;font-size:14px;">
-✔ Pago seguro con tarjeta<br>
-✔ Confirmación automática por email<br>
-✔ Atención en menos de 24h
-</p>
+<div style="margin-top:40px;">
+
+<h3>📅 Elegir fecha</h3>
+
+<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="background:#0ea5e9;">
+Seleccionar día y hora
+</a>
+
+</div>
 
 </section>
 
