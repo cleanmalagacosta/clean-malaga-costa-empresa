@@ -37,11 +37,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 .logo img{
-height:45px;
-object-fit:contain;
-background:white;
-padding:5px;
-border-radius:8px;
+height:50px;
 }
 
 .nav-link{
@@ -49,6 +45,8 @@ color:white;
 margin:0 15px;
 text-decoration:none;
 }
+
+.nav-link.active{color:#ef4444;}
 
 .phone{
 background:#ef4444;
@@ -92,6 +90,11 @@ padding:14px 30px;
 border-radius:10px;
 text-decoration:none;
 display:inline-block;
+transition:all 0.3s ease;
+}
+
+.btn:hover{
+transform:translateY(-4px);
 }
 
 /* SECTIONS */
@@ -144,6 +147,12 @@ border-radius:15px;
 width:45%;
 }
 
+/* TESTIMONIOS */
+.testimonios p{
+margin:10px 0;
+font-weight:500;
+}
+
 /* CTA */
 .cta{
 background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
@@ -183,7 +192,7 @@ width:100%;
 <!-- NAV -->
 <nav id="navbar">
 <div class="logo">
-<img src="/clean-malaga-costa-empresa/logo.png" alt="logo">
+<img src="./logo.png" alt="logo">
 </div>
 
 <div>
@@ -203,8 +212,14 @@ width:100%;
 <p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
 
 <a class="btn" href="https://wa.me/34602350840">
-Solicitar presupuesto GRATIS
+Solicitar presupuesto ahora
 </a>
+
+<p style="margin-top:20px;font-weight:600;">
+⭐ Más de 50 clientes satisfechos<br>
+📍 Servicio en toda la Costa del Sol<br>
+🕒 Atención en menos de 24h
+</p>
 
 </div>
 </section>
@@ -246,12 +261,16 @@ Solicitar presupuesto GRATIS
 <section id="empresa" class="flex">
 
 <div class="img-box">
-<img src="/clean-malaga-costa-empresa/empresa.jpg" alt="empresa">
+<img src="./empresa.jpg" alt="empresa">
 </div>
 
 <div>
 <h2>Empresa de Confianza en Málaga</h2>
-<p>Equipo profesional, productos de calidad y resultados garantizados.</p>
+
+<p>
+Somos una empresa de limpieza en Málaga especializada en viviendas, oficinas y apartamentos turísticos.
+Trabajamos con rapidez, atención al detalle y resultados garantizados.
+</p>
 
 <p>
 ✔ Atención rápida<br>
@@ -264,6 +283,16 @@ Solicitar información
 </a>
 
 </div>
+
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+<h2>Lo que dicen nuestros clientes</h2>
+
+<p>⭐⭐⭐⭐⭐ “Servicio rápido y muy profesional”</p>
+<p>⭐⭐⭐⭐⭐ “Mi apartamento quedó perfecto”</p>
+<p>⭐⭐⭐⭐⭐ “Volveré a contratar sin duda”</p>
 
 </section>
 
