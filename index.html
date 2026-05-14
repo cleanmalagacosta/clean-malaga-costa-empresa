@@ -4,16 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Clean Málaga Costa</title>
+<title>Clean Málaga Costa | Limpieza Profesional</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-margin:0;
 font-family:'Poppins',sans-serif;
-background:#f5f7fb;
+background:#f4f7fb;
+color:#1f2937;
 }
 
 /* NAV */
@@ -23,7 +25,7 @@ color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 50px;
+padding:15px 60px;
 }
 
 .logo{
@@ -35,47 +37,60 @@ font-size:22px;
 color:white;
 margin:0 15px;
 text-decoration:none;
+font-weight:500;
 }
 
 .phone{
 background:#ef4444;
 padding:10px 18px;
 border-radius:8px;
+font-weight:600;
 }
 
-/* HERO */
+/* HERO COLLAGE */
 .hero{
-position:relative;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:300px 300px;
 }
 
 .hero img{
 width:100%;
-height:500px;
+height:100%;
 object-fit:cover;
 }
 
-.overlay{
+/* OVERLAY CENTRAL */
+.hero-center{
 position:absolute;
-bottom:0;
-width:100%;
-background:linear-gradient(transparent, #0b3c6f);
-color:white;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:30px 40px;
+border-radius:20px;
 text-align:center;
-padding:40px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-.overlay h1{
-font-size:40px;
+.hero-center h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero-center p{
+font-size:16px;
+margin-bottom:15px;
 }
 
 .btn{
 background:#ef4444;
-padding:14px 28px;
 color:white;
+padding:14px 28px;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 display:inline-block;
-margin-top:15px;
+font-weight:600;
 }
 
 /* SERVICIOS */
@@ -84,65 +99,88 @@ padding:80px 10%;
 text-align:center;
 }
 
+.section h2{
+font-size:36px;
+margin-bottom:10px;
+}
+
 .cards{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
 .card{
 background:white;
 padding:25px;
 border-radius:15px;
-width:250px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* INFO */
-.info{
+/* ABOUT */
+.about{
 display:flex;
 gap:40px;
 align-items:center;
 padding:80px 10%;
 }
 
-.info img{
+.about img{
 width:50%;
 border-radius:15px;
 }
 
-.info-text{
+.about-text{
 width:50%;
+}
+
+.about-text h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.about-text p{
+margin-bottom:10px;
 }
 
 /* CTA */
 .cta{
-background:#0b3c6f;
+background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
 color:white;
-padding:40px;
 text-align:center;
+padding:60px;
 }
 
-.cta .btn{
-background:#ef4444;
+.cta h2{
+font-size:30px;
+margin-bottom:15px;
 }
 
 /* FOOTER */
 footer{
 background:#0b3c6f;
 color:white;
-padding:40px;
 text-align:center;
+padding:30px;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
-.info{
+
+.hero{
+grid-template-columns:1fr;
+grid-template-rows:200px 200px 200px 200px;
+}
+
+.about{
 flex-direction:column;
 }
-.info img, .info-text{
+
+.about img,.about-text{
 width:100%;
 }
+
 }
 
 </style>
@@ -153,44 +191,52 @@ width:100%;
 <!-- NAV -->
 <nav>
 <div class="logo">Clean Málaga Costa</div>
+
 <div class="menu">
 <a href="#">Inicio</a>
 <a href="#">Servicios</a>
 <a href="#">Contacto</a>
 </div>
+
 <div class="phone">📞 602 350 840</div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<!-- HERO COLLAGE -->
+<section style="position:relative;">
 
-<div class="overlay">
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+</div>
+
+<div class="hero-center">
 <h1>Limpieza Profesional en Málaga</h1>
 <p>Oficinas, viviendas y apartamentos turísticos</p>
-<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20presupuesto">Solicitar presupuesto</a>
+
+<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20presupuesto">
+Solicitar presupuesto
+</a>
 </div>
+
 </section>
 
 <!-- SERVICIOS -->
 <section class="section">
 <h2>Servicios</h2>
+<p>Soluciones de limpieza adaptadas a cada cliente</p>
 
 <div class="cards">
 
 <div class="card">
 <h3>Viviendas</h3>
-<p>Limpieza completa de hogares</p>
+<p>Limpieza completa de casas</p>
 </div>
 
 <div class="card">
 <h3>Oficinas</h3>
-<p>Espacios limpios y profesionales</p>
-</div>
-
-<div class="card">
-<h3>Apartamentos</h3>
-<p>Ideal para Airbnb</p>
+<p>Espacios impecables</p>
 </div>
 
 <div class="card">
@@ -198,14 +244,19 @@ width:100%;
 <p>Mantenimiento continuo</p>
 </div>
 
+<div class="card">
+<h3>Apartamentos</h3>
+<p>Servicio para Airbnb</p>
+</div>
+
 </div>
 </section>
 
-<!-- INFO -->
-<section class="info">
+<!-- ABOUT -->
+<section class="about">
 <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
 
-<div class="info-text">
+<div class="about-text">
 <h2>Profesionales que cuidan cada detalle</h2>
 
 <p>✔ Personal cualificado</p>
@@ -219,16 +270,16 @@ width:100%;
 <!-- CTA -->
 <section class="cta">
 <h2>¿Necesitas un presupuesto?</h2>
-<p>Contáctanos y te respondemos en minutos</p>
+<p>Te respondemos en minutos por WhatsApp</p>
 
 <a class="btn" href="https://wa.me/34602350840?text=Hola,%20necesito%20limpieza">
-Contactar por WhatsApp
+Contactar ahora
 </a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<p>© 2026 Clean Málaga Costa</p>
+© 2026 Clean Málaga Costa
 </footer>
 
 </body>
