@@ -4,126 +4,145 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Empresa de Limpieza en Málaga | Clean Málaga Costa</title>
+<title>Clean Málaga Costa</title>
 
-<meta name="description" content="Empresa de limpieza en Málaga especializada en oficinas, viviendas y apartamentos turísticos. Servicio rápido, profesional y 24/7.">
-<meta name="keywords" content="empresa de limpieza Málaga, limpieza oficinas Málaga, limpieza Airbnb Málaga, limpieza Costa del Sol">
-<meta name="author" content="Clean Málaga Costa">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
+margin:0;
 font-family:'Poppins',sans-serif;
-background:#f4f7fb;
-color:#1f2937;
-scroll-behavior:smooth;
+background:#f5f7fb;
 }
 
+/* NAV */
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(10,20,40,0.92);
+background:#0b3c6f;
+color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 50px;
-z-index:1000;
-border-bottom:3px solid #0ea5e9;
+padding:15px 50px;
 }
 
-.logo{color:white;font-size:28px;font-weight:700;}
-.logo span{color:#0ea5e9;}
-
-.menu{display:flex;gap:25px;}
-.menu a{color:white;text-decoration:none;}
-
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
+.logo{
+font-weight:700;
+font-size:22px;
 }
 
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.6);
-}
-
-.hero-content{
-position:relative;
+.menu a{
 color:white;
-max-width:900px;
-padding:20px;
+margin:0 15px;
+text-decoration:none;
 }
 
-.hero h1{font-size:60px;margin-bottom:20px;}
-.hero p{font-size:20px;margin-bottom:25px;}
+.phone{
+background:#ef4444;
+padding:10px 18px;
+border-radius:8px;
+}
+
+/* HERO */
+.hero{
+position:relative;
+}
+
+.hero img{
+width:100%;
+height:500px;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+width:100%;
+background:linear-gradient(transparent, #0b3c6f);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.overlay h1{
+font-size:40px;
+}
 
 .btn{
-background:#0ea5e9;
-padding:16px 30px;
+background:#ef4444;
+padding:14px 28px;
 color:white;
 text-decoration:none;
-border-radius:10px;
-font-weight:600;
+border-radius:8px;
 display:inline-block;
+margin-top:15px;
 }
 
-.btn:hover{background:#ef4444;}
-
-section{padding:100px 8%;}
-
-.section-title{text-align:center;margin-bottom:50px;}
-.section-title h2{font-size:40px;}
+/* SERVICIOS */
+.section{
+padding:80px 10%;
+text-align:center;
+}
 
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .card{
 background:white;
 padding:25px;
 border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.contact{
-background:#0ea5e9;
+/* INFO */
+.info{
+display:flex;
+gap:40px;
+align-items:center;
+padding:80px 10%;
+}
+
+.info img{
+width:50%;
+border-radius:15px;
+}
+
+.info-text{
+width:50%;
+}
+
+/* CTA */
+.cta{
+background:#0b3c6f;
 color:white;
+padding:40px;
 text-align:center;
-padding:60px;
-border-radius:20px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
+.cta .btn{
+background:#ef4444;
+}
+
+/* FOOTER */
+footer{
+background:#0b3c6f;
 color:white;
-padding:18px 26px;
-border-radius:50px;
-font-weight:700;
-animation:pulse 1.5s infinite;
+padding:40px;
+text-align:center;
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
+@media(max-width:900px){
+.info{
+flex-direction:column;
+}
+.info img, .info-text{
+width:100%;
+}
 }
 
 </style>
@@ -131,139 +150,86 @@ animation:pulse 1.5s infinite;
 
 <body>
 
+<!-- NAV -->
 <nav>
-<div class="logo">Clean <span>Málaga Costa</span></div>
+<div class="logo">Clean Málaga Costa</div>
 <div class="menu">
-<a href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
+<a href="#">Inicio</a>
+<a href="#">Servicios</a>
+<a href="#">Contacto</a>
 </div>
+<div class="phone">📞 602 350 840</div>
 </nav>
 
-<section class="hero" id="inicio">
-<div class="hero-content">
+<!-- HERO -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 
-<h1>Empresa de Limpieza en Málaga con Servicio Rápido y Garantizado</h1>
-
-<p>
-Limpieza profesional de oficinas, viviendas y apartamentos turísticos en toda la Costa del Sol.
-</p>
-
-<a class="btn" href="https://wa.me/34602350840?text=Hola,%20necesito%20un%20servicio%20de%20limpieza%20en%20Málaga">
-Solicitar presupuesto GRATIS
-</a>
-
-<p style="margin-top:10px;font-size:14px;">
-🔥 Últimos huecos disponibles esta semana
-</p>
-
+<div class="overlay">
+<h1>Limpieza Profesional en Málaga</h1>
+<p>Oficinas, viviendas y apartamentos turísticos</p>
+<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20presupuesto">Solicitar presupuesto</a>
 </div>
 </section>
 
-<section id="servicios">
-<div class="section-title">
+<!-- SERVICIOS -->
+<section class="section">
 <h2>Servicios</h2>
-</div>
 
 <div class="cards">
 
 <div class="card">
-<h3>Limpieza de Viviendas</h3>
-<p>Casas y apartamentos completamente limpios y desinfectados.</p>
+<h3>Viviendas</h3>
+<p>Limpieza completa de hogares</p>
 </div>
 
 <div class="card">
-<h3>Limpieza de Oficinas</h3>
-<p>Espacios de trabajo impecables cada día.</p>
+<h3>Oficinas</h3>
+<p>Espacios limpios y profesionales</p>
 </div>
 
 <div class="card">
-<h3>Apartamentos Turísticos</h3>
-<p>Servicio rápido para Airbnb y alquiler vacacional.</p>
+<h3>Apartamentos</h3>
+<p>Ideal para Airbnb</p>
+</div>
+
+<div class="card">
+<h3>Comunidades</h3>
+<p>Mantenimiento continuo</p>
 </div>
 
 </div>
 </section>
 
-<section>
-<div class="section-title">
-<h2>¿Por qué elegirnos?</h2>
-</div>
+<!-- INFO -->
+<section class="info">
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
 
-<div class="cards">
+<div class="info-text">
+<h2>Profesionales que cuidan cada detalle</h2>
 
-<div class="card">
-<h3>✔ Experiencia</h3>
-<p>Más de 500 servicios realizados en Málaga.</p>
-</div>
+<p>✔ Personal cualificado</p>
+<p>✔ Productos profesionales</p>
+<p>✔ Atención rápida</p>
 
-<div class="card">
-<h3>✔ Rapidez</h3>
-<p>Disponibilidad inmediata.</p>
-</div>
-
-<div class="card">
-<h3>✔ Garantía</h3>
-<p>Resultados garantizados en cada servicio.</p>
-</div>
-
+<a class="btn" href="#">Más sobre nosotros</a>
 </div>
 </section>
 
-<section>
-<div class="section-title">
-<h2>Opiniones</h2>
-</div>
+<!-- CTA -->
+<section class="cta">
+<h2>¿Necesitas un presupuesto?</h2>
+<p>Contáctanos y te respondemos en minutos</p>
 
-<div class="cards">
-
-<div class="card">
-<p>"Servicio rápido y profesional."</p>
-<strong>- María</strong>
-</div>
-
-<div class="card">
-<p>"Muy recomendables."</p>
-<strong>- Javier</strong>
-</div>
-
-<div class="card">
-<p>"Perfecto para Airbnb."</p>
-<strong>- Laura</strong>
-</div>
-
-</div>
-</section>
-
-<section id="contacto">
-<div class="contact">
-<h2>Contacto</h2>
-<p>📞 +34 602 350 840</p>
-<p>📧 cleanmalagacosta@gmail.com</p>
-
-<a class="btn" href="https://wa.me/34602350840?text=Hola,%20quiero%20un%20presupuesto">
-Solicitar presupuesto
+<a class="btn" href="https://wa.me/34602350840?text=Hola,%20necesito%20limpieza">
+Contactar por WhatsApp
 </a>
-</div>
 </section>
 
-<footer style="text-align:center;padding:30px;">
-Clean Málaga Costa © 2026
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Clean Málaga Costa</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/34602350840?text=Hola,%20necesito%20información">
-WhatsApp
-</a>
-
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "Clean Málaga Costa",
-"telephone": "+34602350840",
-"areaServed": "Málaga"
-}
-</script>
 
 </body>
 </html>
