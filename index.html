@@ -57,9 +57,7 @@ gap:25px;margin-top:30px;
 background:white;padding:20px;border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 cursor:pointer;
-transition:0.3s;
 }
-.card:hover{transform:scale(1.05);}
 
 .card img{
 width:100%;height:180px;object-fit:cover;border-radius:10px;
@@ -143,35 +141,43 @@ PAGAR Y RESERVAR AHORA
 </div>
 </section>
 
-<!-- SERVICIOS (MODIFICADO SOLO CLICK) -->
+<!-- SERVICIOS (AHORA ABREN PÁGINAS) -->
 <section id="servicios">
 <h2>Servicios Profesionales</h2>
 
 <div class="cards">
 
-<div class="card" onclick="window.location.href='#reserva';">
+<a href="vivienda.html">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 <h3>Viviendas</h3>
 <p>Limpieza completa de casas y apartamentos.</p>
 </div>
+</a>
 
-<div class="card" onclick="window.location.href='#reserva';">
+<a href="oficina.html">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
 <h3>Oficinas</h3>
 <p>Espacios de trabajo limpios y organizados.</p>
 </div>
+</a>
 
-<div class="card" onclick="window.location.href='#reserva';">
+<a href="airbnb.html">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
 <h3>Apartamentos</h3>
 <p>Servicio rápido para Airbnb.</p>
 </div>
+</a>
 
-<div class="card" onclick="window.location.href='#reserva';">
+<a href="profunda.html">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<h3>Comunidades</h3>
-<p>Mantenimiento de zonas comunes.</p>
+<h3>Limpieza profunda</h3>
+<p>Servicio premium intensivo.</p>
 </div>
+</a>
 
 </div>
 </section>
