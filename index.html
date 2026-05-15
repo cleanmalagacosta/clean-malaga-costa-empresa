@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
 
@@ -17,11 +16,9 @@ body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
 position:fixed;width:100%;display:flex;justify-content:space-between;
 align-items:center;padding:20px 60px;z-index:1000;
 }
-
 #navbar.scrolled{background:#0b3c6f;}
 
 .logo img{height:50px;}
-
 .nav-link{color:white;margin:0 15px;text-decoration:none;}
 
 .phone{
@@ -35,13 +32,10 @@ background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') c
 display:flex;align-items:center;justify-content:center;
 text-align:center;color:white;position:relative;
 }
-
 .hero::before{
 content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6);
 }
-
 .hero-content{position:relative;max-width:800px;}
-
 .hero h1{font-size:48px;margin-bottom:20px;}
 
 .btn{
@@ -72,10 +66,8 @@ width:100%;height:180px;object-fit:cover;border-radius:10px;
 .flex{
 display:flex;gap:40px;align-items:center;flex-wrap:wrap;
 }
-
 .img-box{width:45%;}
 .img-box img{width:100%;border-radius:15px;}
-
 .flex div{width:45%;}
 
 /* CTA */
@@ -98,7 +90,6 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 @media(max-width:900px){
 .img-box,.flex div{width:100%;}
 }
-
 </style>
 </head>
 
@@ -124,12 +115,14 @@ background:#0b3c6f;color:white;padding:20px;text-align:center;
 <section id="inicio" class="hero">
 <div class="hero-content">
 
-<h1>Limpieza Profesional en Málaga en 24h</h1>
+<h1>Reserva tu limpieza en Málaga en menos de 1 minuto</h1>
 
-<p>Oficinas, viviendas y apartamentos turísticos con resultados garantizados.</p>
+<p style="font-size:18px;">
+💳 Pago online seguro • 📅 Reserva inmediata • ⚡ Servicio en 24h
+</p>
 
-<p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
-🔥 Solo 3 huecos disponibles esta semana
+<p style="background:#ef4444;padding:12px;border-radius:8px;margin:15px 0;font-weight:700;">
+🔥 SOLO QUEDAN 3 PLAZAS ESTA SEMANA
 </p>
 
 <p style="font-weight:600;">
@@ -137,11 +130,11 @@ Desde 49€ • Reserva solo con pago confirmado
 </p>
 
 <a class="btn" href="#reserva" style="font-size:18px;">
-RESERVAR AHORA
+PAGAR Y RESERVAR AHORA
 </a>
 
 <p style="margin-top:15px;">
-⭐ Más de 50 clientes satisfechos<br>
+⭐⭐⭐⭐⭐ +50 clientes satisfechos en Málaga<br>
 📍 Málaga y Costa del Sol<br>
 🕒 Respuesta en menos de 24h
 </p>
@@ -207,7 +200,6 @@ Reservar ahora
 </a>
 
 </div>
-
 </section>
 
 <!-- RESERVA -->
@@ -222,34 +214,45 @@ Reservar ahora
 </p>
 
 <p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
-⚠️ Reserva solo válida tras pago
+⚠️ SOLO CLIENTES CON PAGO CONFIRMADO
+</p>
+
+<p style="font-weight:700;">
+⬇️ Selecciona y paga tu servicio
 </p>
 
 <div>
 
 <a class="btn" href="https://buy.stripe.com/fZu4gyeKBcnK03R5wm6J200" target="_blank">
-🧼 Airbnb - 50€
+🧼 Limpieza Airbnb Express - 50€
 </a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/14AbJ08mdfzWg2PbUK6J201" target="_blank">
-🏠 Vivienda - 80€
+🏠 Limpieza Vivienda Completa - 80€
 </a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/7sY6oG7i9fzW4k7cYO6J202" target="_blank">
-🏢 Oficina - 100€
+🏢 Limpieza Oficina Profesional - 100€
 </a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/7sY28q45X0F217V9MC6J203" target="_blank">
-✨ Profunda - 150€
+✨ Limpieza Profunda Premium - 150€
 </a>
 
 </div>
 
 <div style="margin-top:40px;">
 
-<h3>📅 Elegir fecha</h3>
+<h3>📅 SOLO DESPUÉS DEL PAGO</h3>
 
-<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="background:#0ea5e9;">
+<p style="color:#fff;">
+❗ Si no has realizado el pago, tu reserva será cancelada automáticamente.
+</p>
+
+<a class="btn" 
+href="https://calendar.app.google/X62mF6Rvr5LmnZz17" 
+target="_blank"
+style="background:#0ea5e9;">
 Seleccionar día y hora
 </a>
 
