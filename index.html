@@ -57,7 +57,9 @@ gap:25px;margin-top:30px;
 background:white;padding:20px;border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 cursor:pointer;
+transition:0.3s;
 }
+.card:hover{transform:scale(1.05);}
 
 .card img{
 width:100%;height:180px;object-fit:cover;border-radius:10px;
@@ -141,41 +143,65 @@ PAGAR Y RESERVAR AHORA
 </div>
 </section>
 
-<!-- SERVICIOS (AHORA ABREN PÁGINAS) -->
+<!-- SERVICIOS CON OFERTAS -->
 <section id="servicios">
 <h2>Servicios Profesionales</h2>
 
 <div class="cards">
 
-<a href="vivienda.html">
+<a href="vivienda.html" style="text-decoration:none;color:inherit;">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<h3>Viviendas</h3>
+<h3>🏠 Viviendas</h3>
 <p>Limpieza completa de casas y apartamentos.</p>
+<p style="font-size:14px;">
+✔ Cocina<br>✔ Baños<br>✔ Suelos<br>✔ Habitaciones
+</p>
+<p style="color:#ef4444;font-weight:700;">
+🔥 <del>95€</del> 79€
+</p>
 </div>
 </a>
 
-<a href="oficina.html">
+<a href="oficina.html" style="text-decoration:none;color:inherit;">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
-<h3>Oficinas</h3>
+<h3>🏢 Oficinas</h3>
 <p>Espacios de trabajo limpios y organizados.</p>
+<p style="font-size:14px;">
+✔ Mesas<br>✔ Suelos<br>✔ Baños<br>✔ Zonas comunes
+</p>
+<p style="color:#ef4444;font-weight:700;">
+🔥 <del>120€</del> 99€
+</p>
 </div>
 </a>
 
-<a href="airbnb.html">
+<a href="airbnb.html" style="text-decoration:none;color:inherit;">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
-<h3>Apartamentos</h3>
-<p>Servicio rápido para Airbnb.</p>
+<h3>🧼 Airbnb</h3>
+<p>Servicio rápido para alquiler vacacional.</p>
+<p style="font-size:14px;">
+✔ Sábanas<br>✔ Baño<br>✔ Cocina<br>✔ Preparación
+</p>
+<p style="color:#ef4444;font-weight:700;">
+🔥 <del>60€</del> 49€
+</p>
 </div>
 </a>
 
-<a href="profunda.html">
+<a href="profunda.html" style="text-decoration:none;color:inherit;">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<h3>Limpieza profunda</h3>
-<p>Servicio premium intensivo.</p>
+<h3>✨ Limpieza profunda</h3>
+<p>Servicio intensivo premium.</p>
+<p style="font-size:14px;">
+✔ Cocina profunda<br>✔ Baños<br>✔ Zonas difíciles<br>✔ Suelos
+</p>
+<p style="color:#ef4444;font-weight:700;">
+🔥 <del>180€</del> 149€
+</p>
 </div>
 </a>
 
@@ -221,30 +247,24 @@ PAGAR Y RESERVAR AHORA
 
 <a class="btn" href="https://buy.stripe.com/3cIfZg8md9by8An4si6J207" target="_blank">
 🧼 Limpieza Airbnb Express - <del>60€</del> 49€
-<span style="font-size:12px;display:block;">🔥 Ideal para alquiler vacacional</span>
 </a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/9B6dR845X73qg2P1g66J206" target="_blank">
-🏠 Limpieza Vivienda Completa - <del>95€</del> 79€
-<span style="font-size:12px;display:block;">⭐ Más solicitado</span>
+🏠 Vivienda - <del>95€</del> 79€
 </a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/eVq7sK45X5ZmcQD6Aq6J205" target="_blank">
-🏢 Limpieza Oficina Profesional - <del>120€</del> 99€
-<span style="font-size:12px;display:block;">✔ Ideal para empresas</span>
+🏢 Oficina - <del>120€</del> 99€
 </a><br><br>
 
 <a class="btn" href="https://buy.stripe.com/3cIbJ00TL3ReaIv8Iy6J204" target="_blank">
-✨ Limpieza Profunda Premium - <del>180€</del> 149€
-<span style="font-size:12px;display:block;">⭐ Servicio premium más completo</span>
+✨ Profunda - <del>180€</del> 149€
 </a>
 
 </div>
 
 <div style="margin-top:40px;">
 <h3>📅 SOLO DESPUÉS DEL PAGO</h3>
-
-<p>❗ Si no has realizado el pago, tu reserva será cancelada automáticamente.</p>
 
 <a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="background:#0ea5e9;">
 Seleccionar día y hora
