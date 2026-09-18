@@ -8,6 +8,8 @@
 <title>Clean Málaga Costa | Limpieza profesional en Málaga y Costa del Sol</title>
 <meta name="description" content="Servicios profesionales de limpieza en Málaga y Costa del Sol. Viviendas, apartamentos turísticos, Airbnb, oficinas y limpiezas profundas. Contacta con Clean Málaga Costa.">
 
+<link rel="icon" href="logo.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -22,109 +24,415 @@ a{text-decoration:none}
     display:flex;align-items:center;justify-content:space-between;
     z-index:1000;transition:.3s
 }
-#navbar.scrolled{background:white;box-shadow:0 3px 20px rgba(0,0,0,.08)}
+#navbar.scrolled{
+    background:white;
+    box-shadow:0 3px 20px rgba(0,0,0,.08)
+}
+
 .logo img{height:52px;display:block}
-.nav-menu{display:flex;align-items:center;gap:28px}
-.nav-link{color:white;font-weight:600;transition:.2s}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:28px
+}
+
+.nav-link{
+    color:white;
+    font-weight:600;
+    transition:.2s
+}
+
 #navbar.scrolled .nav-link{color:#17324d}
+
 .nav-link:hover{color:#0ea5e9}
-.nav-button{background:#ef4444;color:white;padding:11px 20px;border-radius:9px;font-weight:700}
+
+.nav-button{
+    background:#ef4444;
+    color:white;
+    padding:11px 20px;
+    border-radius:9px;
+    font-weight:700
+}
+
+.nav-button:hover{
+    background:#dc2626;
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:transparent;
+    color:#17324d;
+    font-size:30px;
+    cursor:pointer;
+    padding:5px;
+}
+
+#navbar:not(.scrolled) .menu-toggle{
+    color:white;
+}
 
 .hero{
-    min-height:720px;height:100vh;max-height:900px;
-    background:linear-gradient(rgba(8,43,76,.68),rgba(8,43,76,.68)),
+    min-height:720px;
+    height:100vh;
+    max-height:900px;
+    background:
+    linear-gradient(rgba(8,43,76,.68),rgba(8,43,76,.68)),
     url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=85')
     center/cover;
-    display:flex;align-items:center;color:white;padding-top:80px
+    display:flex;
+    align-items:center;
+    color:white;
+    padding-top:80px
 }
-.hero-content{width:90%;max-width:900px;margin:auto;text-align:center}
-.badge{
-    display:inline-block;background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.3);padding:8px 18px;
-    border-radius:50px;margin-bottom:22px;font-weight:600
-}
-.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.1;margin-bottom:22px;font-weight:800}
-.hero p{font-size:19px;max-width:720px;margin:0 auto 28px}
-.hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
-.btn{display:inline-block;padding:15px 28px;border-radius:10px;font-weight:700;transition:.2s}
-.btn-primary{background:#ef4444;color:white}
-.btn-primary:hover{background:#dc2626;transform:translateY(-2px)}
-.btn-secondary{background:white;color:#17324d}
-.btn-secondary:hover{transform:translateY(-2px)}
-.hero-trust{margin-top:30px;font-size:15px}
 
-.trust{background:white;padding:28px 0;box-shadow:0 4px 20px rgba(0,0,0,.05)}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.hero-content{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    text-align:center
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 18px;
+    border-radius:50px;
+    margin-bottom:22px;
+    font-weight:600
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,66px);
+    line-height:1.1;
+    margin-bottom:22px;
+    font-weight:800
+}
+
+.hero p{
+    font-size:19px;
+    max-width:720px;
+    margin:0 auto 28px
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.2s
+}
+
+.btn-primary{
+    background:#ef4444;
+    color:white
+}
+
+.btn-primary:hover{
+    background:#dc2626;
+    transform:translateY(-2px)
+}
+
+.btn-secondary{
+    background:white;
+    color:#17324d
+}
+
+.btn-secondary:hover{
+    transform:translateY(-2px)
+}
+
+.hero-trust{
+    margin-top:30px;
+    font-size:15px
+}
+
+.trust{
+    background:white;
+    padding:28px 0;
+    box-shadow:0 4px 20px rgba(0,0,0,.05)
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center
+}
+
 .trust-item{font-weight:600}
-.trust-icon{font-size:25px;margin-bottom:5px}
+
+.trust-icon{
+    font-size:25px;
+    margin-bottom:5px
+}
 
 section{padding:85px 0}
-.section-title{text-align:center;max-width:750px;margin:0 auto 45px}
-.section-title h2{font-size:36px;line-height:1.2;margin-bottom:12px;color:#123b60}
+
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px
+}
+
+.section-title h2{
+    font-size:36px;
+    line-height:1.2;
+    margin-bottom:12px;
+    color:#123b60
+}
+
 .section-title p{color:#617387}
 
 .services{background:#f7fafc}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.card{
-    background:white;border-radius:16px;overflow:hidden;
-    box-shadow:0 8px 30px rgba(21,54,82,.08);
-    transition:.25s;height:100%
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px
 }
-.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(21,54,82,.13)}
-.card img{width:100%;height:190px;object-fit:cover}
+
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(21,54,82,.08);
+    transition:.25s;
+    height:100%
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(21,54,82,.13)
+}
+
+.card img{
+    width:100%;
+    height:190px;
+    object-fit:cover
+}
+
 .card-content{padding:23px}
-.card h3{color:#123b60;margin-bottom:9px;font-size:21px}
-.card p{color:#617387;font-size:14px;margin-bottom:15px}
-.card-list{color:#38566e;font-size:14px;line-height:1.9}
-.price{margin-top:15px;color:#ef4444;font-size:19px;font-weight:800}
+
+.card h3{
+    color:#123b60;
+    margin-bottom:9px;
+    font-size:21px
+}
+
+.card p{
+    color:#617387;
+    font-size:14px;
+    margin-bottom:15px
+}
+
+.card-list{
+    color:#38566e;
+    font-size:14px;
+    line-height:1.9
+}
+
+.price{
+    margin-top:15px;
+    color:#ef4444;
+    font-size:19px;
+    font-weight:800
+}
 
 .about{background:white}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.about-image img{width:100%;border-radius:18px;box-shadow:0 12px 35px rgba(0,0,0,.12)}
-.about-text h2{font-size:36px;color:#123b60;margin-bottom:18px}
-.about-text p{color:#617387;margin-bottom:20px}
-.check-list{list-style:none;margin-bottom:25px}
-.check-list li{margin:10px 0;font-weight:600}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center
+}
+
+.about-image img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.12)
+}
+
+.about-text h2{
+    font-size:36px;
+    color:#123b60;
+    margin-bottom:18px
+}
+
+.about-text p{
+    color:#617387;
+    margin-bottom:20px
+}
+
+.check-list{
+    list-style:none;
+    margin-bottom:25px
+}
+
+.check-list li{
+    margin:10px 0;
+    font-weight:600
+}
 
 .process{background:#eef6fb}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.process-card{background:white;padding:28px 20px;border-radius:15px;text-align:center}
-.number{
-    width:48px;height:48px;display:flex;align-items:center;
-    justify-content:center;margin:0 auto 15px;border-radius:50%;
-    background:#0ea5e9;color:white;font-weight:800;font-size:20px
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px
 }
+
+.process-card{
+    background:white;
+    padding:28px 20px;
+    border-radius:15px;
+    text-align:center
+}
+
+.number{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#0ea5e9;
+    color:white;
+    font-weight:800;
+    font-size:20px
+}
+
 .process-card h3{margin-bottom:8px}
-.process-card p{color:#617387;font-size:14px}
 
-.areas{background:white;text-align:center}
-.area-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:900px;margin:auto}
-.area{background:#eef6fb;padding:10px 18px;border-radius:30px;font-weight:600}
+.process-card p{
+    color:#617387;
+    font-size:14px
+}
 
-.cta{background:linear-gradient(135deg,#0b3c6f,#0ea5e9);color:white;text-align:center}
-.cta h2{font-size:40px;margin-bottom:15px}
-.cta p{max-width:650px;margin:0 auto 25px}
-.cta-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.areas{
+    background:white;
+    text-align:center
+}
+
+.area-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    max-width:900px;
+    margin:auto
+}
+
+.area{
+    background:#eef6fb;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:600
+}
+
+.cta{
+    background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
+    color:white;
+    text-align:center
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 25px
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap
+}
 
 .contact{background:#f7fafc}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px
+}
+
 .contact-card{
-    background:white;padding:30px;border-radius:15px;text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
     box-shadow:0 6px 25px rgba(21,54,82,.07)
 }
-.contact-card .icon{font-size:30px;margin-bottom:10px}
-.contact-card h3{margin-bottom:6px}
-.contact-card a{color:#0b78b8;font-weight:600}
 
-footer{background:#082b4c;color:white;text-align:center;padding:30px 20px}
-footer p{margin:5px 0;font-size:14px}
-.footer-links{margin-top:12px}
-.footer-links a{color:white;margin:0 8px;font-size:13px}
+.contact-card .icon{
+    font-size:30px;
+    margin-bottom:10px
+}
+
+.contact-card h3{margin-bottom:6px}
+
+.contact-card a{
+    color:#0b78b8;
+    font-weight:600
+}
+
+footer{
+    background:#082b4c;
+    color:white;
+    text-align:center;
+    padding:30px 20px
+}
+
+footer p{
+    margin:5px 0;
+    font-size:14px
+}
+
+.footer-links{
+    margin-top:12px
+}
+
+.footer-links a{
+    color:white;
+    margin:0 8px;
+    font-size:13px
+}
+
+.footer-links a:hover{
+    text-decoration:underline
+}
 
 .whatsapp{
-    position:fixed;right:20px;bottom:20px;z-index:999;
-    background:#25D366;color:white;padding:14px 20px;
-    border-radius:50px;font-weight:700;box-shadow:0 5px 20px rgba(0,0,0,.2)
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#25D366;
+    color:white;
+    padding:14px 20px;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 5px 20px rgba(0,0,0,.2)
+}
+
+.whatsapp:hover{
+    transform:translateY(-2px)
 }
 
 @media(max-width:950px){
@@ -136,19 +444,84 @@ footer p{margin:5px 0;font-size:14px}
     .about-grid{grid-template-columns:1fr}
     .contact-grid{grid-template-columns:1fr}
 }
+
 @media(max-width:700px){
-    #navbar{padding:12px 5%}
+
+    #navbar{
+        padding:12px 5%;
+        background:rgba(255,255,255,.96);
+        box-shadow:0 3px 20px rgba(0,0,0,.08)
+    }
+
+    #navbar .nav-link{
+        color:#17324d
+    }
+
     .logo img{height:44px}
-    .nav-menu{display:none}
-    .hero{min-height:680px}
+
+    .menu-toggle{
+        display:block
+    }
+
+    .nav-menu{
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:white;
+        padding:15px 5% 20px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        box-shadow:0 8px 20px rgba(0,0,0,.08)
+    }
+
+    .nav-menu.active{
+        display:flex
+    }
+
+    .nav-link{
+        padding:12px 0;
+        border-bottom:1px solid #e5e7eb;
+        color:#17324d !important
+    }
+
+    .nav-button{
+        text-align:center;
+        margin-top:12px
+    }
+
+    .hero{
+        min-height:680px;
+        height:auto
+    }
+
     .hero h1{font-size:39px}
+
     .hero p{font-size:17px}
+
     .cards{grid-template-columns:1fr}
-    .trust-grid{grid-template-columns:1fr 1fr;font-size:14px}
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+        font-size:14px
+    }
+
     .process-grid{grid-template-columns:1fr}
-    .section-title h2,.about-text h2{font-size:30px}
+
+    .section-title h2,
+    .about-text h2{
+        font-size:30px
+    }
+
     .cta h2{font-size:31px}
-    .whatsapp{right:12px;bottom:12px;padding:12px 17px}
+
+    .whatsapp{
+        right:12px;
+        bottom:12px;
+        padding:12px 17px
+    }
 }
 </style>
 </head>
@@ -156,23 +529,45 @@ footer p{margin:5px 0;font-size:14px}
 <body>
 
 <nav id="navbar">
-    <a href="#inicio" class="logo">
+
+    <a href="#inicio" class="logo" aria-label="Clean Málaga Costa - Inicio">
         <img src="logo.png" alt="Clean Málaga Costa">
     </a>
 
-    <div class="nav-menu">
+    <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu">
+        ☰
+    </button>
+
+    <div class="nav-menu" id="mainMenu">
+
         <a href="#inicio" class="nav-link">Inicio</a>
+
         <a href="#servicios" class="nav-link">Servicios</a>
+
         <a href="empresa.html" class="nav-link">Nosotros</a>
+
         <a href="#zonas" class="nav-link">Zonas</a>
+
         <a href="#contacto" class="nav-link">Contacto</a>
+
         <a href="#contacto" class="nav-button">Solicitar presupuesto</a>
+
     </div>
 </nav>
 
 <section id="inicio" class="hero">
+
     <div class="hero-content">
-        <div class="badge">🧽 Limpieza profesional en Málaga y Costa del Sol</div>
+
+        <div class="badge">
+            🧽 Limpieza profesional en Málaga y Costa del Sol
+        </div>
 
         <h1>Una limpieza impecable para tu hogar o negocio</h1>
 
@@ -182,14 +577,19 @@ footer p{margin:5px 0;font-size:14px}
         </p>
 
         <div class="hero-buttons">
-            <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
 
-            <a href="https://wa.me/607618960"
-               class="btn btn-secondary"
-               target="_blank"
-               rel="noopener">
+            <a href="#contacto" class="btn btn-primary">
+                Solicitar presupuesto
+            </a>
+
+            <a
+                href="https://wa.me/607618960"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer">
                 💬 Hablar por WhatsApp
             </a>
+
         </div>
 
         <div class="hero-trust">
@@ -197,94 +597,174 @@ footer p{margin:5px 0;font-size:14px}
             ✔ Servicio profesional &nbsp;&nbsp;
             ✔ Málaga y Costa del Sol
         </div>
+
     </div>
 </section>
 
 <div class="trust">
+
     <div class="container">
+
         <div class="trust-grid">
-            <div class="trust-item"><div class="trust-icon">⚡</div>Respuesta rápida</div>
-            <div class="trust-item"><div class="trust-icon">🧽</div>Limpieza profesional</div>
-            <div class="trust-item"><div class="trust-icon">💬</div>Atención personalizada</div>
-            <div class="trust-item"><div class="trust-icon">📍</div>Málaga y Costa del Sol</div>
+
+            <div class="trust-item">
+                <div class="trust-icon">⚡</div>
+                Respuesta rápida
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">🧽</div>
+                Limpieza profesional
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">💬</div>
+                Atención personalizada
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">📍</div>
+                Málaga y Costa del Sol
+            </div>
+
         </div>
+
     </div>
 </div>
 
 <section id="servicios" class="services">
+
     <div class="container">
 
         <div class="section-title">
             <h2>Nuestros servicios</h2>
-            <p>Soluciones de limpieza adaptadas a cada tipo de espacio.</p>
+            <p>
+                Soluciones de limpieza adaptadas a cada tipo de espacio.
+            </p>
         </div>
 
         <div class="cards">
 
             <a href="vivienda.html">
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Limpieza de viviendas">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
+                        alt="Limpieza de viviendas"
+                        loading="lazy">
+
                     <div class="card-content">
+
                         <h3>🏠 Viviendas</h3>
-                        <p>Limpieza de casas y apartamentos para mantener tu hogar limpio y agradable.</p>
+
+                        <p>
+                            Limpieza de casas y apartamentos para mantener
+                            tu hogar limpio y agradable.
+                        </p>
+
                         <div class="card-list">
                             ✔ Cocina<br>
                             ✔ Baños<br>
                             ✔ Habitaciones<br>
                             ✔ Suelos
                         </div>
+
                         <div class="price">Desde 79€</div>
+
                     </div>
                 </div>
             </a>
 
             <a href="airbnb.html">
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Limpieza de Airbnb">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80"
+                        alt="Limpieza de Airbnb"
+                        loading="lazy">
+
                     <div class="card-content">
+
                         <h3>🧼 Airbnb</h3>
-                        <p>Preparación profesional de apartamentos turísticos entre huéspedes.</p>
+
+                        <p>
+                            Preparación profesional de apartamentos
+                            turísticos entre huéspedes.
+                        </p>
+
                         <div class="card-list">
                             ✔ Limpieza<br>
                             ✔ Baños<br>
                             ✔ Cocina<br>
                             ✔ Preparación
                         </div>
+
                         <div class="price">Desde 49€</div>
+
                     </div>
                 </div>
             </a>
 
             <a href="oficina.html">
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Limpieza de oficinas">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                        alt="Limpieza de oficinas"
+                        loading="lazy">
+
                     <div class="card-content">
+
                         <h3>🏢 Oficinas</h3>
-                        <p>Espacios de trabajo limpios, cuidados y preparados para tu equipo.</p>
+
+                        <p>
+                            Espacios de trabajo limpios, cuidados y
+                            preparados para tu equipo.
+                        </p>
+
                         <div class="card-list">
                             ✔ Mesas<br>
                             ✔ Suelos<br>
                             ✔ Baños<br>
                             ✔ Zonas comunes
                         </div>
+
                         <div class="price">Desde 99€</div>
+
                     </div>
                 </div>
             </a>
 
             <a href="profunda.html">
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="Limpieza profunda">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80"
+                        alt="Limpieza profunda"
+                        loading="lazy">
+
                     <div class="card-content">
+
                         <h3>✨ Limpieza profunda</h3>
-                        <p>Una limpieza intensiva para espacios que necesitan una atención especial.</p>
+
+                        <p>
+                            Una limpieza intensiva para espacios que
+                            necesitan una atención especial.
+                        </p>
+
                         <div class="card-list">
                             ✔ Cocina profunda<br>
                             ✔ Baños<br>
                             ✔ Zonas difíciles<br>
                             ✔ Suelos
                         </div>
+
                         <div class="price">Desde 149€</div>
+
                     </div>
                 </div>
             </a>
@@ -294,14 +774,22 @@ footer p{margin:5px 0;font-size:14px}
 </section>
 
 <section id="empresa" class="about">
+
     <div class="container">
+
         <div class="about-grid">
 
             <div class="about-image">
-                <img src="empresa.jpg" alt="Equipo de Clean Málaga Costa">
+
+                <img
+                    src="empresa.jpg"
+                    alt="Clean Málaga Costa"
+                    loading="lazy">
+
             </div>
 
             <div class="about-text">
+
                 <h2>Profesionales de limpieza en Málaga</h2>
 
                 <p>
@@ -317,13 +805,18 @@ footer p{margin:5px 0;font-size:14px}
                 </p>
 
                 <ul class="check-list">
+
                     <li>✔ Atención personalizada</li>
                     <li>✔ Servicio profesional</li>
                     <li>✔ Comunicación rápida</li>
                     <li>✔ Diferentes soluciones de limpieza</li>
+
                 </ul>
 
-                <a href="empresa.html" class="btn btn-primary">Conocer más sobre nosotros</a>
+                <a href="empresa.html" class="btn btn-primary">
+                    Conocer más sobre nosotros
+                </a>
+
             </div>
 
         </div>
@@ -331,37 +824,67 @@ footer p{margin:5px 0;font-size:14px}
 </section>
 
 <section class="process">
+
     <div class="container">
 
         <div class="section-title">
+
             <h2>¿Cómo trabajamos?</h2>
-            <p>Un proceso sencillo para que organizar tu limpieza sea fácil.</p>
+
+            <p>
+                Un proceso sencillo para que organizar tu limpieza sea fácil.
+            </p>
+
         </div>
 
         <div class="process-grid">
 
             <div class="process-card">
+
                 <div class="number">1</div>
+
                 <h3>Contacta</h3>
-                <p>Escríbenos por WhatsApp o solicita información.</p>
+
+                <p>
+                    Escríbenos por WhatsApp o solicita información.
+                </p>
+
             </div>
 
             <div class="process-card">
+
                 <div class="number">2</div>
+
                 <h3>Presupuesto</h3>
-                <p>Revisamos tus necesidades y te informamos del servicio.</p>
+
+                <p>
+                    Revisamos tus necesidades y te informamos del servicio.
+                </p>
+
             </div>
 
             <div class="process-card">
+
                 <div class="number">3</div>
+
                 <h3>Organizamos</h3>
-                <p>Coordinamos contigo el día y horario.</p>
+
+                <p>
+                    Coordinamos contigo el día y horario.
+                </p>
+
             </div>
 
             <div class="process-card">
+
                 <div class="number">4</div>
+
                 <h3>Limpiamos</h3>
-                <p>Realizamos el servicio acordado de forma profesional.</p>
+
+                <p>
+                    Realizamos el servicio acordado de forma profesional.
+                </p>
+
             </div>
 
         </div>
@@ -369,14 +892,21 @@ footer p{margin:5px 0;font-size:14px}
 </section>
 
 <section id="zonas" class="areas">
+
     <div class="container">
 
         <div class="section-title">
+
             <h2>Zonas de servicio</h2>
-            <p>Trabajamos en Málaga y diferentes zonas de la Costa del Sol.</p>
+
+            <p>
+                Trabajamos en Málaga y diferentes zonas de la Costa del Sol.
+            </p>
+
         </div>
 
         <div class="area-list">
+
             <span class="area">Málaga</span>
             <span class="area">Costa del Sol</span>
             <span class="area">Torremolinos</span>
@@ -384,12 +914,14 @@ footer p{margin:5px 0;font-size:14px}
             <span class="area">Fuengirola</span>
             <span class="area">Mijas</span>
             <span class="area">Marbella</span>
+
         </div>
 
     </div>
 </section>
 
 <section class="cta">
+
     <div class="container">
 
         <h2>¿Necesitas una limpieza?</h2>
@@ -401,80 +933,146 @@ footer p{margin:5px 0;font-size:14px}
 
         <div class="cta-buttons">
 
-            <a href="https://wa.me/607618960"
-               class="btn btn-secondary"
-               target="_blank"
-               rel="noopener">
+            <a
+                href="https://wa.me/607618960"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer">
                 💬 WhatsApp
             </a>
 
-            <a href="tel:+34607618960" class="btn btn-primary">
+            <a
+                href="tel:+34607618960"
+                class="btn btn-primary">
                 📞 607 618 960
             </a>
 
         </div>
+
     </div>
 </section>
 
 <section id="contacto" class="contact">
+
     <div class="container">
 
         <div class="section-title">
+
             <h2>Contacta con nosotros</h2>
-            <p>Estamos disponibles para resolver tus dudas y preparar tu servicio.</p>
+
+            <p>
+                Estamos disponibles para resolver tus dudas y preparar tu servicio.
+            </p>
+
         </div>
 
         <div class="contact-grid">
 
             <div class="contact-card">
+
                 <div class="icon">💬</div>
+
                 <h3>WhatsApp</h3>
-                <a href="https://wa.me/607618960" target="_blank" rel="noopener">
+
+                <a
+                    href="https://wa.me/607618960"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     607 618 960
                 </a>
+
             </div>
 
             <div class="contact-card">
+
                 <div class="icon">📞</div>
+
                 <h3>Teléfono</h3>
+
                 <a href="tel:+34607618960">
                     607 618 960
                 </a>
+
             </div>
 
             <div class="contact-card">
+
                 <div class="icon">📍</div>
+
                 <h3>Zona</h3>
-                <p>Málaga y Costa del Sol</p>
+
+                <p>
+                    Málaga y Costa del Sol
+                </p>
+
             </div>
 
         </div>
+
     </div>
 </section>
 
 <footer>
+
     <p>© 2026 Clean Málaga Costa</p>
-    <p>Servicios profesionales de limpieza en Málaga y Costa del Sol.</p>
+
+    <p>
+        Servicios profesionales de limpieza en Málaga y Costa del Sol.
+    </p>
 
     <div class="footer-links">
+
         <a href="privacidad.html">Privacidad</a>
+
         <a href="cookies.html">Cookies</a>
+
     </div>
+
 </footer>
 
-<a class="whatsapp"
-   href="https://wa.me/607618960"
-   target="_blank"
-   rel="noopener"
-   aria-label="Contactar por WhatsApp">
+<a
+    class="whatsapp"
+    href="https://wa.me/607618960"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
     💬 WhatsApp
 </a>
 
 <script>
-window.addEventListener("scroll", function(){
-    const navbar = document.getElementById("navbar");
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+const menuToggle = document.getElementById("menuToggle");
+const mainMenu = document.getElementById("mainMenu");
+const navbar = document.getElementById("navbar");
+
+function updateNavbar() {
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+}
+
+window.addEventListener("scroll", updateNavbar);
+
+menuToggle.addEventListener("click", function() {
+    const isOpen = mainMenu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Cerrar menú" : "Abrir menú"
+    );
 });
+
+document.querySelectorAll("#mainMenu a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        mainMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+    });
+});
+
+updateNavbar();
 </script>
 
 </body>
