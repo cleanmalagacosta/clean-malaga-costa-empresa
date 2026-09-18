@@ -2,399 +2,615 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Limpieza de viviendas en Málaga | Clean Málaga Costa</title>
+  <title>Limpieza de viviendas en Málaga | Clean Málaga Costa</title>
+  <meta name="description" content="Servicio profesional de limpieza de viviendas en Málaga y Costa del Sol. Reserva tu limpieza desde 79 €.">
 
-<meta name="description" content="Servicio de limpieza profesional de viviendas en Málaga y Costa del Sol. Cocina, baños, suelos, habitaciones y limpieza general. Desde 79€." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #183b56;
-    background: #f7fbfd;
-    line-height: 1.6;
-}
-
-nav {
-    background: white;
-    padding: 15px 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    width: 150px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #183b56;
-    margin-left: 22px;
-    font-weight: 500;
-}
-
-.nav-button {
-    background: #0ea5a8;
-    color: white !important;
-    padding: 10px 18px;
-    border-radius: 8px;
-}
-
-.hero {
-    background: linear-gradient(135deg, #e8f8fa, #ffffff);
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.badge {
-    display: inline-block;
-    background: #dff6f6;
-    color: #087f83;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 44px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    color: #536b7a;
-    font-size: 18px;
-}
-
-.price {
-    font-size: 38px;
-    font-weight: 700;
-    color: #0ea5a8;
-    margin: 25px 0;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.button {
-    display: inline-block;
-    padding: 14px 24px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.primary {
-    background: #0ea5a8;
-    color: white;
-}
-
-.secondary {
-    background: white;
-    color: #183b56;
-    border: 1px solid #d5e3e9;
-}
-
-section {
-    padding: 65px 20px;
-    max-width: 1050px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 28px;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #607582;
-}
-
-.process {
-    background: white;
-    max-width: none;
-}
-
-.process-inner {
-    max-width: 1050px;
-    margin: auto;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.step {
-    text-align: center;
-    padding: 25px;
-}
-
-.number {
-    width: 45px;
-    height: 45px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: #0ea5a8;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
-
-.cta {
-    background: #183b56;
-    color: white;
-    text-align: center;
-    padding: 65px 20px;
-}
-
-.cta p {
-    max-width: 650px;
-    margin: 0 auto 25px;
-    color: #dbe8ef;
-}
-
-footer {
-    background: #102d43;
-    color: #cbd9e1;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 14px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-@media (max-width: 700px) {
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: #17324d;
+      background: #f7fbff;
+      line-height: 1.6;
+    }
 
     nav {
-        flex-direction: column;
-        gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e5edf4;
+      backdrop-filter: blur(10px);
     }
 
-    nav a {
-        margin: 0 6px;
-        font-size: 14px;
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    h1 {
-        font-size: 34px;
+    .logo {
+      height: 52px;
+      width: auto;
+      display: block;
     }
 
-    .grid,
-    .steps {
-        grid-template-columns: 1fr;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #17324d;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #0b7fab;
     }
 
     .hero {
-        padding: 60px 20px;
+      padding: 85px 20px 70px;
+      background: linear-gradient(180deg, #eaf7ff 0%, #f7fbff 100%);
+      text-align: center;
     }
-}
-</style>
+
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.1rem, 5vw, 3.7rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #60758a;
+      font-size: 1.05rem;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0b7fab;
+      margin-bottom: 24px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 13px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      background: #0b7fab;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(11, 127, 171, 0.18);
+    }
+
+    .primary:hover {
+      background: #096d93;
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.18);
+    }
+
+    .whatsapp:hover {
+      background: #1ebe5d;
+    }
+
+    .secondary {
+      background: #ffffff;
+      color: #0b7fab;
+      border: 1px solid #cfe2ec;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 75px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #60758a;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e4edf4;
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 30px rgba(23, 50, 77, 0.05);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #60758a;
+      font-size: 0.95rem;
+    }
+
+    .highlight {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #ffffff;
+      border: 1px solid #e4edf4;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(23, 50, 77, 0.05);
+    }
+
+    .highlight p {
+      margin: 0;
+      color: #60758a;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: #ffffff;
+      border: 1px solid #e4edf4;
+      border-radius: 18px;
+      padding: 28px 22px;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #eaf7ff;
+      color: #0b7fab;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .step h3 {
+      margin: 0 0 10px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #60758a;
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      padding: 80px 20px;
+      background: #eaf7ff;
+      text-align: center;
+    }
+
+    .cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      margin: 0 0 14px;
+      font-size: 2rem;
+    }
+
+    .cta p {
+      margin: 0 auto 28px;
+      color: #60758a;
+    }
+
+    footer {
+      background: #17324d;
+      color: #dce8f1;
+      padding: 35px 20px;
+    }
+
+    .footer-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-container p {
+      margin: 5px 0;
+    }
+
+    .footer-links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.55rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-container {
+        flex-direction: column;
+        padding: 12px 16px;
+      }
+
+      .logo {
+        height: 46px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        padding: 60px 15px 55px;
+      }
+
+      .section {
+        padding: 55px 15px;
+      }
+
+      .cards,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 360px;
+      }
+
+      .highlight {
+        padding: 25px 20px;
+      }
+
+      .cta {
+        padding: 60px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-    <a href="index.html">
+  <nav>
+    <div class="nav-container">
+
+      <a href="index.html">
         <img src="logo.png" alt="Clean Málaga Costa" class="logo">
-    </a>
+      </a>
 
-    <div>
+      <div class="nav-links">
         <a href="index.html">Inicio</a>
         <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#nosotros">Nosotros</a>
-        <a href="index.html#contacto" class="nav-button">Contacto</a>
-    </div>
-</nav>
-
-<header class="hero">
-
-    <div class="badge">🏠 Limpieza profesional de viviendas</div>
-
-    <h1>Tu vivienda limpia, fresca y lista para disfrutar</h1>
-
-    <p>
-        Servicio de limpieza profesional para viviendas en Málaga y Costa del Sol.
-        Nos encargamos de las zonas más importantes de tu hogar con un servicio
-        cuidado y personalizado.
-    </p>
-
-    <div class="price">Desde 79€</div>
-
-    <div class="buttons">
-        <a class="button primary"
-           href="https://buy.stripe.com/9B6dR845X73qg2P1g66J206">
-           Reservar limpieza por 79€
-        </a>
-
-        <a class="button secondary"
-           href="https://wa.me/607618960">
-           💬 Consultar por WhatsApp
-        </a>
-    </div>
-
-</header>
-
-<section>
-
-    <h2>¿Qué incluye la limpieza?</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>🍳 Cocina</h3>
-            <p>
-                Limpieza de superficies, encimeras, fregadero y zonas visibles
-                de la cocina.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🚿 Baños</h3>
-            <p>
-                Limpieza y desinfección de sanitarios, lavabo, ducha o bañera
-                y superficies.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🧹 Suelos</h3>
-            <p>
-                Aspirado y limpieza de los suelos de las zonas incluidas en
-                el servicio.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🛏️ Habitaciones</h3>
-            <p>
-                Limpieza general de habitaciones y superficies para dejar
-                el espacio ordenado y agradable.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="process">
-
-    <div class="process-inner">
-
-        <h2>¿Cómo funciona?</h2>
-
-        <div class="steps">
-
-            <div class="step">
-                <div class="number">1</div>
-                <h3>Reserva</h3>
-                <p>Contacta con nosotros o realiza tu reserva online.</p>
-            </div>
-
-            <div class="step">
-                <div class="number">2</div>
-                <h3>Coordinamos</h3>
-                <p>Confirmamos contigo los detalles del servicio.</p>
-            </div>
-
-            <div class="step">
-                <div class="number">3</div>
-                <h3>Limpiamos</h3>
-                <p>Nuestro equipo realiza la limpieza de tu vivienda.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<div class="cta">
-
-    <h2>¿Quieres dejar tu vivienda en buenas manos?</h2>
-
-    <p>
-        Escríbenos por WhatsApp y te ayudaremos a organizar tu servicio
-        de limpieza.
-    </p>
-
-    <div class="buttons">
-
-        <a class="button primary"
-           href="https://wa.me/607618960">
-           💬 WhatsApp 607 618 960
-        </a>
-
-        <a class="button secondary"
-           href="tel:607618960">
-           📞 Llamar al 607 618 960
-        </a>
-
-    </div>
-
-</div>
-
-<footer>
-
-    <p>© 2026 Clean Málaga Costa</p>
-
-    <p style="margin-top:10px;">
-        <a href="index.html">Inicio</a>
-        <a href="index.html#servicios">Servicios</a>
+        <a href="empresa.html">Nosotros</a>
         <a href="index.html#contacto">Contacto</a>
-    </p>
+      </div>
 
-</footer>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-container">
+
+      <h1>Tu vivienda limpia, fresca y lista para disfrutar</h1>
+
+      <p>
+        Servicio profesional de limpieza de viviendas en Málaga y Costa del Sol.
+        Nos encargamos de dejar tu hogar limpio, cuidado y preparado.
+      </p>
+
+      <div class="price">Desde 79 €</div>
+
+      <div class="buttons">
+        <a
+          class="btn primary"
+          href="https://buy.stripe.com/9B6dR845X73qg2P1g66J206"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reservar y pagar 79 €
+        </a>
+
+        <a
+          class="btn whatsapp"
+          href="https://wa.me/607618960?text=Hola%2C%20acabo%20de%20realizar%20el%20pago%20de%20una%20limpieza%20de%20vivienda%20de%2079%20%E2%82%AC.%20Quiero%20coordinar%20la%20fecha%20y%20hora.%0A%0ANombre%3A%0ADirecci%C3%B3n%3A%0AFecha%20preferida%3A%0AHora%20preferida%3A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ya he pagado — WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+
+      <div class="section-title">
+        <h2>¿Qué incluye la limpieza?</h2>
+        <p>Una limpieza completa de las principales zonas de tu vivienda.</p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Cocina</h3>
+          <p>
+            Limpieza de superficies, encimeras, muebles exteriores,
+            fregadero y zona de trabajo.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Baños</h3>
+          <p>
+            Limpieza y desinfección de sanitarios, lavabo, ducha,
+            bañera y superficies.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Suelos</h3>
+          <p>
+            Aspirado y fregado de los suelos de las zonas incluidas
+            en el servicio.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Habitaciones</h3>
+          <p>
+            Limpieza general, superficies, polvo y cuidado de las
+            principales zonas de la vivienda.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <div class="highlight">
+        <h2>Ideal para mantener tu vivienda siempre preparada</h2>
+
+        <p>
+          Puedes reservar el servicio cuando necesites una limpieza
+          profesional de tu vivienda, ya sea para mantenimiento habitual,
+          antes o después de una estancia o para preparar el hogar.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <div class="section-title">
+        <h2>Cómo funciona</h2>
+        <p>Un proceso sencillo y directo.</p>
+      </div>
+
+      <div class="process">
+
+        <article class="step">
+          <div class="step-number">1</div>
+          <h3>Reserva</h3>
+          <p>
+            Realiza el pago online de 79 € mediante Stripe.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">2</div>
+          <h3>Escríbenos</h3>
+          <p>
+            Después del pago, pulsa el botón de WhatsApp y envíanos
+            tus datos y la fecha que prefieres.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">3</div>
+          <h3>Coordinamos</h3>
+          <p>
+            Confirmamos contigo la fecha y la hora del servicio.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="cta">
+
+      <div class="cta-container">
+
+        <h2>¿Quieres reservar tu limpieza?</h2>
+
+        <p>
+          Reserva online por 79 € y después contacta con nosotros
+          por WhatsApp para coordinar los detalles.
+        </p>
+
+        <div class="buttons">
+
+          <a
+            class="btn primary"
+            href="https://buy.stripe.com/9B6dR845X73qg2P1g66J206"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Reservar y pagar 79 €
+          </a>
+
+          <a
+            class="btn whatsapp"
+            href="https://wa.me/607618960?text=Hola%2C%20acabo%20de%20realizar%20el%20pago%20de%20una%20limpieza%20de%20vivienda%20de%2079%20%E2%82%AC.%20Quiero%20coordinar%20la%20fecha%20y%20hora.%0A%0ANombre%3A%0ADirecci%C3%B3n%3A%0AFecha%20preferida%3A%0AHora%20preferida%3A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ya he pagado — WhatsApp
+          </a>
+
+        </div>
+
+        <p style="margin-top:22px;">
+          <a
+            href="tel:+34607618960"
+            style="color:#0b7fab;font-weight:600;text-decoration:none;"
+          >
+            📞 607 618 960
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/607618960?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20limpieza%20de%20vivienda."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    💬
+  </a>
+
+  <footer>
+
+    <div class="footer-container">
+
+      <p><strong>© 2026 Clean Málaga Costa</strong></p>
+      <p>Servicios profesionales de limpieza en Málaga y Costa del Sol.</p>
+
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
