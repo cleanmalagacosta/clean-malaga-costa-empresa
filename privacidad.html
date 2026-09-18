@@ -2,407 +2,415 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Política de privacidad | Clean Málaga Costa</title>
+  <title>Política de privacidad | Clean Málaga Costa</title>
+  <meta name="description" content="Política de privacidad de Clean Málaga Costa. Información sobre el tratamiento y protección de datos personales.">
 
-<meta name="description" content="Política de privacidad de Clean Málaga Costa. Información sobre el tratamiento y protección de datos personales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    color:#17324d;
-    background:#f7fafc;
-    line-height:1.7;
-}
-
-.container{
-    width:90%;
-    max-width:900px;
-    margin:auto;
-}
-
-header{
-    background:#082b4c;
-    padding:20px 0;
-}
-
-.header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo img{
-    height:50px;
-    display:block;
-}
-
-.back{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-}
-
-.back:hover{
-    color:#0ea5e9;
-}
-
-.hero{
-    background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
-    color:white;
-    padding:70px 0;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:clamp(32px,5vw,48px);
-    margin-bottom:12px;
-}
-
-.hero p{
-    opacity:.95;
-}
-
-.content{
-    background:white;
-    margin:50px auto;
-    padding:45px;
-    border-radius:18px;
-    box-shadow:0 8px 30px rgba(21,54,82,.08);
-}
-
-h2{
-    color:#123b60;
-    font-size:25px;
-    margin:32px 0 12px;
-}
-
-h2:first-child{
-    margin-top:0;
-}
-
-p{
-    margin-bottom:15px;
-}
-
-ul{
-    margin:10px 0 20px 25px;
-}
-
-li{
-    margin-bottom:8px;
-}
-
-a{
-    color:#0b78b8;
-}
-
-.info{
-    background:#eef6fb;
-    padding:20px;
-    border-radius:12px;
-    margin:20px 0;
-}
-
-footer{
-    background:#082b4c;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
-
-footer p{
-    font-size:14px;
-    margin:5px 0;
-}
-
-.footer-links{
-    margin-top:12px;
-}
-
-.footer-links a{
-    color:white;
-    margin:0 8px;
-    font-size:13px;
-}
-
-@media(max-width:600px){
-
-    .header-inner{
-        flex-direction:column;
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    .content{
-        padding:28px 22px;
-        margin:30px auto;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: #17324d;
+      background: #f7fbff;
+      line-height: 1.7;
     }
 
-    .hero{
-        padding:55px 0;
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e5edf4;
+      backdrop-filter: blur(10px);
     }
-}
-</style>
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #17324d;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #0b7fab;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 70px 20px 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .page-header h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.2;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: #60758a;
+    }
+
+    .content {
+      background: #ffffff;
+      border: 1px solid #e4edf4;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 12px 35px rgba(23, 50, 77, 0.06);
+    }
+
+    .section {
+      margin-bottom: 38px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .content h2 {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      color: #17324d;
+    }
+
+    .content p {
+      margin: 0 0 18px;
+      color: #4f6579;
+    }
+
+    .content ul {
+      margin: 0 0 28px;
+      padding-left: 22px;
+      color: #4f6579;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #17324d;
+      color: #dce8f1;
+      padding: 35px 20px;
+    }
+
+    .footer-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-container p {
+      margin: 5px 0;
+    }
+
+    .footer-links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 12px 16px;
+      }
+
+      .logo {
+        height: 46px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 0.82rem;
+      }
+
+      .page {
+        padding: 50px 15px 60px;
+      }
+
+      .content {
+        padding: 25px 20px;
+        border-radius: 16px;
+      }
+
+      .content h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .page-header {
+        margin-bottom: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="logo.png" alt="Clean Málaga Costa" class="logo">
+      </a>
 
-    <div class="container header-inner">
-
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Clean Málaga Costa">
-        </a>
-
-        <a href="index.html" class="back">
-            ← Volver a la web
-        </a>
-
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="empresa.html">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
     </div>
+  </nav>
 
-</header>
+  <main class="page">
 
-
-<section class="hero">
-
-    <div class="container">
-
-        <h1>Política de privacidad</h1>
-
-        <p>
-            Información sobre el tratamiento y protección de datos personales
-            en Clean Málaga Costa.
-        </p>
-
-    </div>
-
-</section>
-
-
-<main class="container">
+    <header class="page-header">
+      <h1>Política de privacidad</h1>
+      <p>Información sobre el tratamiento y protección de datos personales.</p>
+    </header>
 
     <article class="content">
 
-        <h2>1. Responsable del tratamiento</h2>
-
-        <div class="info">
-
-            <p>
-                <strong>Responsables:</strong>
-                Alban Kouecheu y Yanira Fernandez Romero
-            </p>
-
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:cleanmalagacosta@gmail.com">
-                    cleanmalagacosta@gmail.com
-                </a>
-            </p>
-
-            <p>
-                <strong>Teléfono:</strong>
-                <a href="tel:+34607618960">
-                    607 618 960
-                </a>
-            </p>
-
-        </div>
-
-
-        <h2>2. Qué datos podemos tratar</h2>
+      <section class="section">
+        <h2>1. Qué datos podemos tratar</h2>
 
         <p>
-            Clean Málaga Costa podrá tratar los datos personales que la persona
-            usuaria facilite voluntariamente cuando contacte con nosotros o
-            solicite información sobre nuestros servicios.
+          Clean Málaga Costa podrá tratar los datos personales que la persona
+          usuaria facilite voluntariamente cuando contacte con nosotros o
+          solicite información sobre nuestros servicios.
+        </p>
+
+        <p>Estos datos pueden incluir, según el caso:</p>
+
+        <ul>
+          <li>Nombre y apellidos.</li>
+          <li>Número de teléfono.</li>
+          <li>Dirección de correo electrónico.</li>
+          <li>Información relacionada con el servicio solicitado.</li>
+          <li>Información necesaria para gestionar una reserva o servicio.</li>
+          <li>Datos relacionados con un pago cuando la operación se realiza mediante Stripe.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>2. Finalidades del tratamiento</h2>
+
+        <p>Los datos personales podrán utilizarse para:</p>
+
+        <ul>
+          <li>Responder a consultas y solicitudes de información.</li>
+          <li>Gestionar solicitudes de presupuestos.</li>
+          <li>Coordinar y prestar los servicios de limpieza solicitados.</li>
+          <li>Gestionar comunicaciones relacionadas con los servicios.</li>
+          <li>Gestionar pagos realizados mediante las plataformas de pago disponibles.</li>
+          <li>Atender las obligaciones legales que resulten aplicables.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>3. Base jurídica</h2>
+
+        <p>
+          Dependiendo de la finalidad concreta, el tratamiento de los datos
+          podrá basarse en el consentimiento de la persona interesada, en la
+          adopción de medidas precontractuales o contractuales, o en el
+          cumplimiento de obligaciones legales aplicables.
         </p>
 
         <p>
-            Estos datos pueden incluir, según el caso:
+          Cuando el tratamiento requiera consentimiento, este deberá prestarse
+          mediante una acción afirmativa clara.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>4. Conservación de los datos</h2>
+
+        <p>
+          Los datos personales se conservarán durante el tiempo necesario para
+          atender la finalidad para la que fueron recogidos y, cuando
+          corresponda, durante los plazos necesarios para cumplir obligaciones
+          legales o determinar posibles responsabilidades.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>5. Comunicación de datos a terceros</h2>
+
+        <p>
+          Los datos personales no se venderán ni se cederán a terceros con
+          fines comerciales propios.
+        </p>
+
+        <p>
+          Cuando sea necesario para prestar determinados servicios, los datos
+          podrán ser tratados por proveedores tecnológicos que intervengan en
+          el funcionamiento de la web o en la gestión del servicio.
+        </p>
+
+        <p>
+          En particular, los pagos realizados mediante Stripe son procesados
+          por Stripe conforme a sus propias condiciones y políticas de
+          privacidad.
+        </p>
+
+        <p>
+          Asimismo, la web está alojada mediante GitHub Pages. GitHub informa
+          de que registra determinadas direcciones IP de visitantes por
+          motivos de seguridad.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>6. WhatsApp</h2>
+
+        <p>
+          La web ofrece la posibilidad de contactar mediante WhatsApp. Cuando
+          una persona utiliza este canal, la comunicación se realiza a través
+          del servicio de WhatsApp y se encuentra sujeta también a las
+          condiciones y políticas de privacidad de dicho servicio.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>7. Derechos de las personas usuarias</h2>
+
+        <p>
+          Las personas cuyos datos sean tratados pueden solicitar, cuando
+          corresponda, el ejercicio de los siguientes derechos:
         </p>
 
         <ul>
-            <li>Nombre y apellidos.</li>
-            <li>Número de teléfono.</li>
-            <li>Dirección de correo electrónico.</li>
-            <li>Información relacionada con el servicio solicitado.</li>
-            <li>Información necesaria para gestionar una reserva o servicio.</li>
-            <li>Datos relacionados con un pago cuando la operación se realiza mediante Stripe.</li>
-        </ul>
-
-
-        <h2>3. Finalidades del tratamiento</h2>
-
-        <p>
-            Los datos personales podrán utilizarse para:
-        </p>
-
-        <ul>
-            <li>Responder a consultas y solicitudes de información.</li>
-            <li>Gestionar solicitudes de presupuestos.</li>
-            <li>Coordinar y prestar los servicios de limpieza solicitados.</li>
-            <li>Gestionar comunicaciones relacionadas con los servicios.</li>
-            <li>Gestionar pagos realizados mediante las plataformas de pago disponibles.</li>
-            <li>Atender las obligaciones legales que resulten aplicables.</li>
-        </ul>
-
-
-        <h2>4. Base jurídica</h2>
-
-        <p>
-            Dependiendo de la finalidad concreta, el tratamiento de los datos
-            podrá basarse en el consentimiento de la persona interesada,
-            en la adopción de medidas precontractuales o contractuales,
-            o en el cumplimiento de obligaciones legales aplicables.
-        </p>
-
-        <p>
-            Cuando el tratamiento requiera consentimiento, este deberá
-            prestarse mediante una acción afirmativa clara.
-        </p>
-
-
-        <h2>5. Conservación de los datos</h2>
-
-        <p>
-            Los datos personales se conservarán durante el tiempo necesario
-            para atender la finalidad para la que fueron recogidos y,
-            cuando corresponda, durante los plazos necesarios para cumplir
-            obligaciones legales o determinar posibles responsabilidades.
-        </p>
-
-
-        <h2>6. Comunicación de datos a terceros</h2>
-
-        <p>
-            Los datos personales no se venderán ni se cederán a terceros con
-            fines comerciales propios.
-        </p>
-
-        <p>
-            Cuando sea necesario para prestar determinados servicios, los datos
-            podrán ser tratados por proveedores tecnológicos que intervengan
-            en el funcionamiento de la web o en la gestión del servicio.
-        </p>
-
-        <p>
-            En particular, los pagos realizados mediante Stripe son procesados
-            por Stripe conforme a sus propias condiciones y políticas de
-            privacidad.
-        </p>
-
-        <p>
-            Asimismo, la web está alojada mediante GitHub Pages. GitHub informa
-            de que registra determinadas direcciones IP de visitantes por
-            motivos de seguridad.
-        </p>
-
-
-        <h2>7. WhatsApp</h2>
-
-        <p>
-            La web ofrece la posibilidad de contactar mediante WhatsApp.
-            Cuando una persona utiliza este canal, la comunicación se realiza
-            a través del servicio de WhatsApp y se encuentra sujeta también a
-            las condiciones y políticas de privacidad de dicho servicio.
-        </p>
-
-
-        <h2>8. Derechos de las personas usuarias</h2>
-
-        <p>
-            Las personas cuyos datos sean tratados pueden solicitar, cuando
-            corresponda, el ejercicio de los siguientes derechos:
-        </p>
-
-        <ul>
-            <li>Acceso a sus datos personales.</li>
-            <li>Rectificación de datos inexactos.</li>
-            <li>Supresión de sus datos.</li>
-            <li>Limitación del tratamiento.</li>
-            <li>Oposición al tratamiento.</li>
-            <li>Portabilidad de los datos cuando resulte aplicable.</li>
-            <li>Retirada del consentimiento cuando el tratamiento se base en él.</li>
+          <li>Acceso a sus datos personales.</li>
+          <li>Rectificación de datos inexactos.</li>
+          <li>Supresión de sus datos.</li>
+          <li>Limitación del tratamiento.</li>
+          <li>Oposición al tratamiento.</li>
+          <li>Portabilidad de los datos cuando resulte aplicable.</li>
+          <li>Retirada del consentimiento cuando el tratamiento se base en él.</li>
         </ul>
 
         <p>
-            Para ejercer estos derechos, puede enviarse una solicitud a:
+          Para ejercer estos derechos, la persona interesada podrá utilizar
+          los canales de contacto disponibles en la web.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>8. Reclamación ante la autoridad de control</h2>
+
+        <p>
+          Si una persona considera que el tratamiento de sus datos personales
+          no se ajusta a la normativa aplicable, puede presentar una
+          reclamación ante la Agencia Española de Protección de Datos (AEPD).
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>9. Seguridad</h2>
+
+        <p>
+          Se adoptarán medidas técnicas y organizativas razonables para
+          proteger los datos personales frente a accesos no autorizados,
+          pérdida, alteración o tratamiento indebido, teniendo en cuenta la
+          naturaleza de los datos y los riesgos asociados.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>10. Cambios en esta política</h2>
+
+        <p>
+          Esta política de privacidad podrá actualizarse cuando resulte
+          necesario para adaptarla a cambios en la web, en los servicios
+          ofrecidos o en la normativa aplicable.
         </p>
 
         <p>
-            <a href="mailto:cleanmalagacosta@gmail.com">
-                cleanmalagacosta@gmail.com
-            </a>
+          <strong>Última actualización:</strong> septiembre de 2026.
         </p>
-
-
-        <h2>9. Reclamación ante la autoridad de control</h2>
-
-        <p>
-            Si una persona considera que el tratamiento de sus datos personales
-            no se ajusta a la normativa aplicable, puede presentar una
-            reclamación ante la Agencia Española de Protección de Datos (AEPD).
-        </p>
-
-
-        <h2>10. Seguridad</h2>
-
-        <p>
-            Se adoptarán medidas técnicas y organizativas razonables para
-            proteger los datos personales frente a accesos no autorizados,
-            pérdida, alteración o tratamiento indebido, teniendo en cuenta
-            la naturaleza de los datos y los riesgos asociados.
-        </p>
-
-
-        <h2>11. Cambios en esta política</h2>
-
-        <p>
-            Esta política de privacidad podrá actualizarse cuando resulte
-            necesario para adaptarla a cambios en la web, en los servicios
-            ofrecidos o en la normativa aplicable.
-        </p>
-
-        <p>
-            <strong>Última actualización:</strong> septiembre de 2026.
-        </p>
+      </section>
 
     </article>
 
-</main>
+  </main>
 
+  <footer>
+    <div class="footer-container">
+      <p><strong>© 2026 Clean Málaga Costa</strong></p>
+      <p>Servicios profesionales de limpieza en Málaga y Costa del Sol.</p>
 
-<footer>
-
-    <p>
-        © 2026 Clean Málaga Costa
-    </p>
-
-    <p>
-        Servicios profesionales de limpieza en Málaga y Costa del Sol.
-    </p>
-
-    <div class="footer-links">
-
+      <div class="footer-links">
         <a href="index.html">Inicio</a>
-        <a href="aviso-legal.html">Aviso legal</a>
         <a href="privacidad.html">Privacidad</a>
         <a href="cookies.html">Cookies</a>
-
+      </div>
     </div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
