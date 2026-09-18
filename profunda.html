@@ -2,565 +2,636 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Limpieza profunda en Málaga | Clean Málaga Costa</title>
+  <title>Limpieza profunda en Málaga | Clean Málaga Costa</title>
 
-    <meta name="description" content="Limpieza profunda profesional en Málaga y Costa del Sol. Cocina intensiva, baños completos, zonas difíciles y suelos. Servicio desde 149€.">
+  <meta
+    name="description"
+    content="Limpieza profunda profesional en Málaga y Costa del Sol. Limpieza a fondo de viviendas, cocinas, baños, suelos y zonas difíciles por 149 €."
+  >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #183b56;
-            background: #f7fbfd;
-            line-height: 1.6;
-        }
+    header {
+      background: #fff;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav {
-            background: #ffffff;
-            padding: 15px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
+    .logo img {
+      width: 180px;
+      max-width: 100%;
+    }
 
-        nav img {
-            width: 150px;
-            height: auto;
-        }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
 
-        nav div {
-            display: flex;
-            align-items: center;
-            gap: 22px;
-        }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+    }
 
-        nav a {
-            color: #183b56;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
+    nav a:hover {
+      color: #0077b6;
+    }
 
-        nav a:hover {
-            color: #18a7a0;
-        }
+    .menu-toggle {
+      display: none;
+      background: #0077b6;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
 
-        .nav-button {
-            background: #18a7a0;
-            color: #ffffff !important;
-            padding: 10px 18px;
-            border-radius: 8px;
-        }
+    .hero {
+      background:
+        linear-gradient(rgba(0, 119, 182, 0.82), rgba(0, 119, 182, 0.82)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
 
-        .nav-button:hover {
-            background: #128b86;
-        }
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
+    }
 
-        .hero {
-            background: linear-gradient(135deg, #eafafa, #f7fbfd);
-            text-align: center;
-            padding: 80px 20px;
-        }
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 18px;
+    }
 
-        .badge {
-            display: inline-block;
-            background: #d9f6f4;
-            color: #128b86;
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    .hero p {
+      font-size: 20px;
+      max-width: 780px;
+      margin: 0 auto 25px;
+    }
 
-        .hero h1 {
-            font-size: 44px;
-            line-height: 1.2;
-            max-width: 850px;
-            margin: 0 auto 20px;
-        }
+    .price {
+      font-size: 38px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
 
-        .hero p {
-            max-width: 720px;
-            margin: 0 auto 25px;
-            font-size: 17px;
-            color: #526b7a;
-        }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
 
-        .price {
-            font-size: 38px;
-            font-weight: 700;
-            color: #18a7a0;
-            margin-bottom: 25px;
-        }
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+    .btn-primary {
+      background: #fff;
+      color: #0077b6;
+    }
 
-        .button {
-            display: inline-block;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s ease;
-        }
+    .btn-primary:hover {
+      background: #f2f2f2;
+    }
 
-        .primary {
-            background: #18a7a0;
-            color: #ffffff;
-        }
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
 
-        .primary:hover {
-            background: #128b86;
-            transform: translateY(-1px);
-        }
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
 
-        .secondary {
-            background: #ffffff;
-            color: #183b56;
-            border: 2px solid #18a7a0;
-        }
+    .btn-secondary {
+      background: #0077b6;
+      color: #fff;
+    }
 
-        .secondary:hover {
-            background: #eafafa;
-        }
+    .btn-secondary:hover {
+      background: #005f91;
+    }
 
-        section {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 70px 20px;
-        }
+    .post-payment {
+      background: #f4fbff;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        section h2 {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 40px;
-        }
+    .post-payment h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+    .post-payment p {
+      max-width: 760px;
+      margin: 0 auto 22px;
+    }
 
-        .card {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 5px 22px rgba(24, 59, 86, 0.08);
-        }
+    .section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
+    .section h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
 
-        .card p {
-            color: #607785;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
 
-        .highlight {
-            background: #eafafa;
-            padding: 30px;
-            border-radius: 14px;
-            margin-top: 30px;
-        }
+    .card {
+      background: #f7f7f7;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+    }
 
-        .highlight h3 {
-            margin-bottom: 10px;
-            font-size: 21px;
-        }
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
 
-        .highlight p {
-            color: #526b7a;
-        }
+    .highlight {
+      background: #f0f8fc;
+      padding: 35px;
+      border-radius: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        .process {
-            background: #ffffff;
-            max-width: none;
-        }
+    .highlight ul {
+      margin-top: 18px;
+      padding-left: 20px;
+    }
 
-        .process-inner {
-            max-width: 1050px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+    .highlight li {
+      margin-bottom: 10px;
+    }
 
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
+    .process {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
 
-        .step {
-            text-align: center;
-        }
+    .step {
+      padding: 25px;
+    }
 
-        .number {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: #18a7a0;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 20px;
-            font-weight: 700;
-        }
+    .step-number {
+      width: 45px;
+      height: 45px;
+      background: #0077b6;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-weight: bold;
+      font-size: 20px;
+    }
 
-        .step h3 {
-            margin-bottom: 8px;
-        }
+    .cta {
+      background: #0077b6;
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+    }
 
-        .step p {
-            color: #607785;
-        }
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
 
-        .cta {
-            background: #183b56;
-            color: #ffffff;
-            text-align: center;
-            max-width: none;
-        }
+    .cta p {
+      margin-bottom: 25px;
+    }
 
-        .cta-inner {
-            max-width: 800px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
 
-        .cta h2 {
-            margin-bottom: 15px;
-        }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
 
-        .cta p {
-            margin-bottom: 25px;
-            color: #dce8ef;
-        }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-        .cta .button {
-            margin: 5px;
-        }
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 27px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
 
-        footer {
-            background: #102d42;
-            color: #dce8ef;
-            text-align: center;
-            padding: 30px 20px;
-        }
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-        footer p {
-            margin-bottom: 10px;
-        }
+    @media (max-width: 700px) {
+      header {
+        padding: 12px 5%;
+      }
 
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
-        }
+      .logo img {
+        width: 150px;
+      }
 
-        @media (max-width: 700px) {
+      .menu-toggle {
+        display: block;
+      }
 
-            nav {
-                flex-direction: column;
-                gap: 12px;
-            }
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-top: 1px solid #eee;
+      }
 
-            nav div {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
+      nav.active {
+        display: flex;
+      }
 
-            nav a {
-                font-size: 13px;
-            }
+      nav a {
+        padding: 14px 20px;
+        border-bottom: 1px solid #eee;
+      }
 
-            .hero {
-                padding: 60px 20px;
-            }
+      .hero {
+        padding: 65px 20px;
+      }
 
-            .hero h1 {
-                font-size: 34px;
-            }
+      .hero h1 {
+        font-size: 32px;
+      }
 
-            .hero p {
-                font-size: 15px;
-            }
+      .hero p {
+        font-size: 18px;
+      }
 
-            .price {
-                font-size: 32px;
-            }
+      .price {
+        font-size: 32px;
+      }
 
-            .grid,
-            .steps {
-                grid-template-columns: 1fr;
-            }
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-            section {
-                padding: 55px 20px;
-            }
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
 
-            section h2 {
-                font-size: 26px;
-            }
+      .cards {
+        grid-template-columns: 1fr;
+      }
 
-            .card {
-                padding: 25px;
-            }
-        }
-    </style>
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 55px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">
-            <img src="logo.png" alt="Clean Málaga Costa">
-        </a>
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Clean Málaga Costa">
+  </a>
 
-        <div>
-            <a href="index.html">Inicio</a>
-            <a href="index.html#servicios">Servicios</a>
-            <a href="index.html#empresa">Nosotros</a>
-            <a href="index.html#contacto">Contacto</a>
-            <a class="nav-button" href="https://wa.me/607618960">WhatsApp</a>
-        </div>
-    </nav>
+  <button
+    class="menu-toggle"
+    onclick="toggleMenu()"
+    aria-label="Abrir menú"
+  >
+    ☰
+  </button>
 
-    <header class="hero">
+  <nav id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="index.html#servicios">Servicios</a>
+    <a href="empresa.html">Nosotros</a>
+    <a href="index.html#contacto">Contacto</a>
 
-        <div class="badge">
-            ✨ Limpieza profunda profesional
-        </div>
+    <a
+      href="https://wa.me/607618960?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20limpieza%20profunda."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
+  </nav>
+</header>
 
-        <h1>
-            Una limpieza a fondo cuando necesitas renovar tu espacio
-        </h1>
+<section class="hero">
 
-        <p>
-            Nuestro servicio de limpieza profunda está pensado para viviendas
-            que necesitan una limpieza más completa y detallada de lo habitual.
-            Trabajamos cocina, baños, suelos y zonas difíciles para dejar el
-            espacio limpio, cuidado y renovado.
-        </p>
+  <h1>Una limpieza a fondo cuando necesitas renovar tu espacio</h1>
 
-        <div class="price">
-            Desde 149€
-        </div>
+  <p>
+    Limpieza profunda profesional para viviendas y espacios que necesitan
+    una limpieza más completa y detallada en Málaga y Costa del Sol.
+  </p>
 
-        <div class="buttons">
-            <a class="button primary"
-               href="https://buy.stripe.com/3cIbJ00TL3ReaIv8Iy6J204">
-                Reservar y pagar 149€
-            </a>
+  <div class="price">149 €</div>
 
-            <a class="button secondary"
-               href="https://wa.me/607618960">
-                Consultar por WhatsApp
-            </a>
-        </div>
+  <div class="buttons">
 
-    </header>
+    <a
+      href="https://buy.stripe.com/3cIbJ00TL3ReaIv8Iy6J204"
+      class="btn btn-primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Reservar y pagar 149 €
+    </a>
 
-    <section>
+    <a
+      href="https://wa.me/607618960?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20limpieza%20profunda."
+      class="btn btn-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
 
-        <h2>
-            ¿Qué incluye la limpieza profunda?
-        </h2>
+  </div>
 
-        <div class="grid">
+</section>
 
-            <div class="card">
-                <h3>🍳 Cocina intensiva</h3>
-                <p>
-                    Limpieza detallada de las principales superficies de la
-                    cocina, incluyendo zonas que necesitan una atención
-                    especial.
-                </p>
-            </div>
+<section class="post-payment">
 
-            <div class="card">
-                <h3>🚿 Baños completos</h3>
-                <p>
-                    Limpieza y desinfección de baños, sanitarios, superficies
-                    y zonas de uso habitual.
-                </p>
-            </div>
+  <h2>¿Ya has realizado el pago?</h2>
 
-            <div class="card">
-                <h3>✨ Zonas difíciles</h3>
-                <p>
-                    Prestamos especial atención a aquellas zonas que suelen
-                    acumular suciedad y que requieren más tiempo y detalle.
-                </p>
-            </div>
+  <p>
+    Escríbenos por WhatsApp para enviarnos los datos del servicio
+    y coordinar el día y la hora de la limpieza profunda.
+  </p>
 
-            <div class="card">
-                <h3>🧹 Suelos</h3>
-                <p>
-                    Limpieza completa de los suelos para conseguir un acabado
-                    limpio y cuidado en toda la vivienda.
-                </p>
-            </div>
+  <a
+    href="https://wa.me/607618960?text=Hola%2C%20acabo%20de%20realizar%20el%20pago%20de%20una%20limpieza%20profunda%20de%20149%20%E2%82%AC.%20Quiero%20coordinar%20la%20fecha%20y%20hora.%0A%0ANombre%3A%0ADirecci%C3%B3n%3A%0AFecha%20preferida%3A%0AHora%20preferida%3A"
+    class="btn btn-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Ya he pagado — WhatsApp
+  </a>
 
-        </div>
+</section>
 
-        <div class="highlight">
+<section class="section">
 
-            <h3>
-                ¿Cuándo elegir una limpieza profunda?
-            </h3>
+  <h2>¿Qué incluye la limpieza profunda?</h2>
 
-            <p>
-                Es una buena opción después de un periodo sin realizar una
-                limpieza completa, antes de entrar en una vivienda nueva,
-                después de determinadas situaciones de uso intensivo o
-                simplemente cuando quieres empezar de cero con un espacio
-                completamente renovado.
-            </p>
+  <div class="cards">
 
-        </div>
+    <div class="card">
+      <h3>Cocina intensiva</h3>
+      <p>
+        Limpieza detallada de superficies, mobiliario y zonas
+        de uso habitual de la cocina.
+      </p>
+    </div>
 
-    </section>
+    <div class="card">
+      <h3>Baños completos</h3>
+      <p>
+        Limpieza e higienización de sanitarios, superficies
+        y zonas del baño.
+      </p>
+    </div>
 
-    <div class="process">
+    <div class="card">
+      <h3>Zonas difíciles</h3>
+      <p>
+        Atención especial a zonas que requieren más tiempo
+        y trabajo de limpieza.
+      </p>
+    </div>
 
-        <div class="process-inner">
+    <div class="card">
+      <h3>Suelos</h3>
+      <p>
+        Aspirado y limpieza completa de los suelos del espacio.
+      </p>
+    </div>
 
-            <h2>
-                Así funciona
-            </h2>
+  </div>
 
-            <div class="steps">
+</section>
 
-                <div class="step">
+<section class="section">
 
-                    <div class="number">
-                        1
-                    </div>
+  <div class="highlight">
 
-                    <h3>
-                        Reserva
-                    </h3>
+    <h2>¿Cuándo elegir una limpieza profunda?</h2>
 
-                    <p>
-                        Realiza tu reserva online de forma rápida y sencilla.
-                    </p>
+    <p>
+      Es una buena opción cuando el espacio necesita una limpieza
+      más completa de lo habitual o cuando quieres empezar de nuevo
+      con una limpieza general.
+    </p>
 
-                </div>
+    <ul>
+      <li>Después de una mudanza.</li>
+      <li>Antes o después de una temporada de alquiler.</li>
+      <li>Cuando el espacio lleva tiempo sin una limpieza completa.</li>
+      <li>Para una puesta a punto general.</li>
+    </ul>
 
-                <div class="step">
+  </div>
 
-                    <div class="number">
-                        2
-                    </div>
+</section>
 
-                    <h3>
-                        Coordinamos
-                    </h3>
+<section class="section">
 
-                    <p>
-                        Nos ponemos en contacto contigo para confirmar los
-                        detalles del servicio.
-                    </p>
+  <h2>Cómo funciona</h2>
 
-                </div>
+  <div class="process">
 
-                <div class="step">
+    <div class="step">
 
-                    <div class="number">
-                        3
-                    </div>
+      <div class="step-number">1</div>
 
-                    <h3>
-                        Limpiamos
-                    </h3>
+      <h3>Reserva</h3>
 
-                    <p>
-                        Nuestro equipo realiza la limpieza profunda de tu
-                        espacio.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
+      <p>
+        Realiza el pago online de 149 € de forma rápida y segura.
+      </p>
 
     </div>
 
-    <div class="cta">
+    <div class="step">
 
-        <div class="cta-inner">
+      <div class="step-number">2</div>
 
-            <h2>
-                ¿Tu vivienda necesita una limpieza a fondo?
-            </h2>
+      <h3>Escríbenos</h3>
 
-            <p>
-                Reserva tu limpieza profunda o escríbenos por WhatsApp para
-                consultar cualquier detalle antes de contratar.
-            </p>
-
-            <a class="button primary"
-               href="https://buy.stripe.com/3cIbJ00TL3ReaIv8Iy6J204">
-                Reservar limpieza profunda
-            </a>
-
-            <a class="button secondary"
-               href="https://wa.me/607618960">
-                WhatsApp · 607 618 960
-            </a>
-
-            <a class="button secondary"
-               href="tel:607618960">
-                Llamar · 607 618 960
-            </a>
-
-        </div>
+      <p>
+        Después del pago, pulsa el botón de WhatsApp y envíanos
+        los datos del servicio.
+      </p>
 
     </div>
 
-    <footer>
+    <div class="step">
 
-        <p>
-            © 2026 Clean Málaga Costa
-        </p>
+      <div class="step-number">3</div>
 
-        <div>
-            <a href="index.html">Inicio</a>
-            <a href="index.html#servicios">Servicios</a>
-            <a href="index.html#contacto">Contacto</a>
-        </div>
+      <h3>Coordinamos</h3>
 
-    </footer>
+      <p>
+        Confirmamos contigo el día y la hora de la limpieza.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>¿Necesitas una limpieza profunda?</h2>
+
+  <p>
+    Reserva online por 149 € y después contacta con nosotros
+    por WhatsApp para coordinar la fecha.
+  </p>
+
+  <div class="buttons">
+
+    <a
+      href="https://buy.stripe.com/3cIbJ00TL3ReaIv8Iy6J204"
+      class="btn btn-primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Reservar y pagar 149 €
+    </a>
+
+    <a
+      href="https://wa.me/607618960?text=Hola%2C%20quiero%20reservar%20una%20limpieza%20profunda."
+      class="btn btn-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
+
+    <a
+      href="tel:+34607618960"
+      class="btn btn-secondary"
+    >
+      607 618 960
+    </a>
+
+  </div>
+
+</section>
+
+<a
+  href="https://wa.me/607618960?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20limpieza%20profunda."
+  class="floating-whatsapp"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp"
+>
+  ☎
+</a>
+
+<footer>
+
+  <p>© 2026 Clean Málaga Costa</p>
+
+  <p>
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="cookies.html">Cookies</a>
+  </p>
+
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("mainNav");
+    nav.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
