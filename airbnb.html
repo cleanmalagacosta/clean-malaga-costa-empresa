@@ -1,28 +1,439 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Limpieza Airbnb</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Limpieza Airbnb en Málaga | Clean Málaga Costa</title>
+
+<meta name="description" content="Limpieza Airbnb profesional en Málaga y Costa del Sol. Preparación del apartamento entre huéspedes, baño, cocina, sábanas y puesta a punto. Desde 49€." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #183b56;
+    background: #f7fbfd;
+    line-height: 1.6;
+}
+
+nav {
+    background: white;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #183b56;
+    margin-left: 22px;
+    font-weight: 500;
+}
+
+.nav-button {
+    background: #0ea5a8;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e8f8fa, #ffffff);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    background: #dff6f6;
+    color: #087f83;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #536b7a;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0ea5a8;
+    margin: 25px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary {
+    background: #0ea5a8;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    color: #183b56;
+    border: 1px solid #d5e3e9;
+}
+
+section {
+    padding: 65px 20px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #607582;
+}
+
+.highlight {
+    background: #e8f8fa;
+    border-radius: 16px;
+    padding: 35px;
+    margin-top: 35px;
+}
+
+.highlight h3 {
+    margin-bottom: 10px;
+}
+
+.process {
+    background: white;
+    max-width: none;
+}
+
+.process-inner {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    padding: 25px;
+}
+
+.number {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #0ea5a8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.cta {
+    background: #183b56;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #dbe8ef;
+}
+
+footer {
+    background: #102d43;
+    color: #cbd9e1;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+}
+</style>
 </head>
 
-<body style="font-family:Arial;padding:40px;">
+<body>
 
-<h1>🧼 Limpieza Airbnb Express</h1>
+<nav>
 
-<p>Servicio rápido para apartamentos turísticos.</p>
+    <a href="index.html">
+        <img src="logo.png" alt="Clean Málaga Costa" class="logo">
+    </a>
 
-<ul>
-<li>Cambio de sábanas</li>
-<li>Limpieza baño</li>
-<li>Cocina básica</li>
-<li>Preparación huéspedes</li>
-</ul>
+    <div>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto" class="nav-button">Contacto</a>
+    </div>
 
-<br>
+</nav>
 
-<a href="https://buy.stripe.com/3cIfZg8md9by8An4si6J207">
-Pagar 49€
-</a>
+<header class="hero">
+
+    <div class="badge">🧼 Limpieza profesional para Airbnb</div>
+
+    <h1>Tu apartamento listo para recibir a los próximos huéspedes</h1>
+
+    <p>
+        Servicio de limpieza y puesta a punto para apartamentos turísticos
+        en Málaga y Costa del Sol. Preparamos el alojamiento para que cada
+        huésped lo encuentre limpio, ordenado y listo para disfrutar.
+    </p>
+
+    <div class="price">Desde 49€</div>
+
+    <div class="buttons">
+
+        <a class="button primary"
+           href="https://buy.stripe.com/3cIfZg8md9by8An4si6J207">
+           Reservar limpieza por 49€
+        </a>
+
+        <a class="button secondary"
+           href="https://wa.me/607618960">
+           💬 Consultar por WhatsApp
+        </a>
+
+    </div>
+
+</header>
+
+<section>
+
+    <h2>¿Qué incluye el servicio?</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🛏️ Cambio de sábanas</h3>
+            <p>
+                Preparación de camas y cambio de ropa de cama para la llegada
+                de los próximos huéspedes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🚿 Limpieza del baño</h3>
+            <p>
+                Limpieza y desinfección de sanitarios, lavabo, ducha o bañera
+                y superficies.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🍳 Cocina</h3>
+            <p>
+                Limpieza general de la cocina, encimeras, fregadero y
+                superficies visibles.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✨ Preparación para huéspedes</h3>
+            <p>
+                Puesta a punto general del apartamento para que esté preparado
+                para la siguiente entrada.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="highlight">
+
+        <h3>Ideal para apartamentos turísticos</h3>
+
+        <p>
+            Si gestionas un Airbnb o una vivienda turística, podemos ayudarte
+            con la limpieza entre reservas para que el alojamiento esté listo
+            para tus próximos huéspedes.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="process">
+
+    <div class="process-inner">
+
+        <h2>¿Cómo funciona?</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="number">1</div>
+                <h3>Reserva</h3>
+                <p>
+                    Contacta con nosotros o realiza tu reserva online.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="number">2</div>
+                <h3>Coordinamos</h3>
+                <p>
+                    Organizamos contigo la limpieza y los detalles del
+                    apartamento.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="number">3</div>
+                <h3>Preparamos</h3>
+                <p>
+                    Dejamos el alojamiento limpio y preparado para los
+                    próximos huéspedes.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="cta">
+
+    <h2>¿Gestionas un Airbnb?</h2>
+
+    <p>
+        Escríbenos y hablamos sobre la limpieza de tu apartamento turístico.
+    </p>
+
+    <div class="buttons">
+
+        <a class="button primary"
+           href="https://wa.me/607618960">
+           💬 WhatsApp 607 618 960
+        </a>
+
+        <a class="button secondary"
+           href="tel:607618960">
+           📞 Llamar al 607 618 960
+        </a>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>© 2026 Clean Málaga Costa</p>
+
+    <p style="margin-top:10px;">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#contacto">Contacto</a>
+    </p>
+
+</footer>
 
 </body>
 </html>
+```
