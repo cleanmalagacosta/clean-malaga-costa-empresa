@@ -2,436 +2,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpieza de oficinas en Málaga | Clean Málaga Costa</title>
+  <meta name="description" content="Limpieza profesional de oficinas en Málaga y Costa del Sol. Servicio de limpieza de oficinas por 99 €. Reserva online y coordina la fecha por WhatsApp.">
 
-<title>Limpieza de oficinas en Málaga | Clean Málaga Costa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<meta name="description" content="Limpieza profesional de oficinas en Málaga y Costa del Sol. Mesas, suelos, baños y zonas comunes. Servicio desde 99€." />
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    header {
+      background: #ffffff;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #183b56;
-    background: #f7fbfd;
-    line-height: 1.6;
-}
-
-nav {
-    background: white;
-    padding: 15px 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    width: 150px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #183b56;
-    margin-left: 22px;
-    font-weight: 500;
-}
-
-.nav-button {
-    background: #0ea5a8;
-    color: white !important;
-    padding: 10px 18px;
-    border-radius: 8px;
-}
-
-.hero {
-    background: linear-gradient(135deg, #e8f8fa, #ffffff);
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.badge {
-    display: inline-block;
-    background: #dff6f6;
-    color: #087f83;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 44px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 720px;
-    margin: auto;
-    color: #536b7a;
-    font-size: 18px;
-}
-
-.price {
-    font-size: 38px;
-    font-weight: 700;
-    color: #0ea5a8;
-    margin: 25px 0;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.button {
-    display: inline-block;
-    padding: 14px 24px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.primary {
-    background: #0ea5a8;
-    color: white;
-}
-
-.secondary {
-    background: white;
-    color: #183b56;
-    border: 1px solid #d5e3e9;
-}
-
-section {
-    padding: 65px 20px;
-    max-width: 1050px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 28px;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #607582;
-}
-
-.highlight {
-    background: #e8f8fa;
-    border-radius: 16px;
-    padding: 35px;
-    margin-top: 35px;
-}
-
-.highlight h3 {
-    margin-bottom: 10px;
-}
-
-.process {
-    background: white;
-    max-width: none;
-}
-
-.process-inner {
-    max-width: 1050px;
-    margin: auto;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.step {
-    text-align: center;
-    padding: 25px;
-}
-
-.number {
-    width: 45px;
-    height: 45px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: #0ea5a8;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
-
-.cta {
-    background: #183b56;
-    color: white;
-    text-align: center;
-    padding: 65px 20px;
-}
-
-.cta h2 {
-    color: white;
-}
-
-.cta p {
-    max-width: 650px;
-    margin: 0 auto 25px;
-    color: #dbe8ef;
-}
-
-footer {
-    background: #102d43;
-    color: #cbd9e1;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 14px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-@media (max-width: 700px) {
+    .logo img {
+      width: 180px;
+      max-width: 100%;
+    }
 
     nav {
-        flex-direction: column;
-        gap: 12px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
     }
 
     nav a {
-        margin: 0 6px;
-        font-size: 14px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
     }
 
-    h1 {
-        font-size: 34px;
+    nav a:hover {
+      color: #0077b6;
     }
 
-    .grid,
-    .steps {
-        grid-template-columns: 1fr;
+    .menu-toggle {
+      display: none;
+      background: #0077b6;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
     }
 
     .hero {
-        padding: 60px 20px;
+      background: linear-gradient(rgba(0, 119, 182, 0.82), rgba(0, 119, 182, 0.82)),
+                  url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80")
+                  center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
     }
-}
-</style>
-</head>
 
-<body>
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 18px;
+    }
 
-<nav>
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 0 auto 25px;
+    }
 
-    <a href="index.html">
-        <img src="logo.png" alt="Clean Málaga Costa" class="logo">
-    </a>
+    .price {
+      font-size: 38px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
 
-    <div>
-        <a href="index.html">Inicio</a>
-        <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#nosotros">Nosotros</a>
-        <a href="index.html#contacto" class="nav-button">Contacto</a>
-    </div>
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
 
-</nav>
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
-<header class="hero">
+    .btn-primary {
+      background: #fff;
+      color: #0077b6;
+    }
 
-    <div class="badge">🏢 Limpieza profesional de oficinas</div>
+    .btn-primary:hover {
+      background: #f2f2f2;
+    }
 
-    <h1>Un espacio de trabajo limpio, cuidado y profesional</h1>
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
 
-    <p>
-        Servicio de limpieza para oficinas y espacios de trabajo en Málaga
-        y Costa del Sol. Cuidamos las zonas de trabajo y las áreas comunes
-        para ayudarte a mantener un entorno agradable.
-    </p>
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
 
-    <div class="price">Desde 99€</div>
+    .btn-secondary {
+      background: #0077b6;
+      color: #fff;
+    }
 
-    <div class="buttons">
+    .btn-secondary:hover {
+      background: #005f91;
+    }
 
-        <a class="button primary"
-           href="https://buy.stripe.com/eVq7sK45X5ZmcQD6Aq6J205">
-           Reservar limpieza por 99€
-        </a>
-
-        <a class="button secondary"
-           href="https://wa.me/607618960">
-           💬 Consultar por WhatsApp
-        </a>
-
-    </div>
-
-</header>
-
-<section>
-
-    <h2>¿Qué incluye el servicio?</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>🖥️ Mesas y superficies</h3>
-            <p>
-                Limpieza de mesas, superficies de trabajo y zonas visibles
-                de la oficina.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🧹 Suelos</h3>
-            <p>
-                Aspirado y limpieza de los suelos de las zonas incluidas
-                en el servicio.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🚿 Baños</h3>
-            <p>
-                Limpieza y desinfección de sanitarios, lavabos y superficies
-                de los baños.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🏢 Zonas comunes</h3>
-            <p>
-                Limpieza general de las áreas comunes para mantener un espacio
-                agradable y cuidado.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="highlight">
-
-        <h3>Una oficina limpia transmite profesionalidad</h3>
-
-        <p>
-            Mantener las instalaciones limpias ayuda a crear un entorno más
-            agradable tanto para el equipo como para clientes y visitantes.
-        </p>
-
-    </div>
-
-</section>
-
-<section class="process">
-
-    <div class="process-inner">
-
-        <h2>¿Cómo funciona?</h2>
-
-        <div class="steps">
-
-            <div class="step">
-                <div class="number">1</div>
-                <h3>Contacta</h3>
-                <p>
-                    Escríbenos o realiza tu reserva online.
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="number">2</div>
-                <h3>Coordinamos</h3>
-                <p>
-                    Hablamos contigo sobre las necesidades de tu oficina.
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="number">3</div>
-                <h3>Limpiamos</h3>
-                <p>
-                    Realizamos el servicio con atención a las zonas acordadas.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<div class="cta">
-
-    <h2>¿Necesitas limpiar tu oficina?</h2>
-
-    <p>
-        Contacta con Clean Málaga Costa y hablamos sobre tu servicio
-        de limpieza.
-    </p>
-
-    <div class="buttons">
-
-        <a class="button primary"
-           href="https://wa.me/607618960">
-           💬 WhatsApp 607 618 960
-        </a>
-
-        <a class="button secondary"
-           href="tel:607618960">
-           📞 Llamar al 607 618 960
-        </a>
-
-    </div>
-
-</div>
-
-<footer>
-
-    <p>© 2026 Clean Málaga Costa</p>
-
-    <p style="margin-top:10px;">
-        <a href="index.html">Inicio</a>
-        <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#contacto">Contacto</a>
-    </p>
-
-</footer>
-
-</body>
-</html>
+    .post-payment {
+      background: #f4fbff;
+      padding: 60px 20px;
+      text-align:
 ```
