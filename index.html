@@ -4,301 +4,1141 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Clean Málaga Costa | Empresa de Limpieza en Málaga</title>
+<title>Clean Málaga Costa | Limpieza profesional en Málaga y Costa del Sol</title>
+<meta name="description" content="Servicios profesionales de limpieza en Málaga y Costa del Sol. Viviendas, apartamentos turísticos, Airbnb, oficinas y limpiezas profundas. Contacta con Clean Málaga Costa.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#f4f7fb;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#17324d;
+    background:#f7fafc;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+/* NAVBAR */
 
 #navbar{
-position:fixed;width:100%;display:flex;justify-content:space-between;
-align-items:center;padding:20px 60px;z-index:1000;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:16px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:1000;
+    transition:.3s;
 }
-#navbar.scrolled{background:#0b3c6f;}
 
-.logo img{height:50px;}
-.nav-link{color:white;margin:0 15px;text-decoration:none;}
+#navbar.scrolled{
+    background:white;
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
+}
 
-.phone{
-background:#ef4444;color:white;padding:10px 18px;border-radius:8px;
+.logo img{
+    height:52px;
+    display:block;
+}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-link{
+    color:white;
+    font-weight:600;
+    transition:.2s;
+}
+
+#navbar.scrolled .nav-link{
+    color:#17324d;
+}
+
+.nav-link:hover{
+    color:#0ea5e9;
+}
+
+.nav-button{
+    background:#ef4444;
+    color:white;
+    padding:11px 20px;
+    border-radius:9px;
+    font-weight:700;
 }
 
 /* HERO */
+
 .hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
-display:flex;align-items:center;justify-content:center;
-text-align:center;color:white;position:relative;
+    min-height:720px;
+    height:100vh;
+    max-height:900px;
+    background:
+        linear-gradient(rgba(8,43,76,.68),rgba(8,43,76,.68)),
+        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+    display:flex;
+    align-items:center;
+    color:white;
+    padding-top:80px;
 }
-.hero::before{
-content:'';position:absolute;inset:0;background:rgba(0,0,0,0.6);
+
+.hero-content{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
-.hero-content{position:relative;max-width:800px;}
-.hero h1{font-size:48px;margin-bottom:20px;}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 18px;
+    border-radius:50px;
+    margin-bottom:22px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,66px);
+    line-height:1.1;
+    margin-bottom:22px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:720px;
+    margin:0 auto 28px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
 
 .btn{
-background:#ef4444;color:white;padding:14px 30px;
-border-radius:10px;text-decoration:none;display:inline-block;
-margin-top:10px;
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:#ef4444;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    background:white;
+    color:#17324d;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-2px);
+}
+
+.hero-trust{
+    margin-top:30px;
+    font-size:15px;
+}
+
+/* TRUST */
+
+.trust{
+    background:white;
+    padding:28px 0;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.trust-item{
+    font-weight:600;
+}
+
+.trust-icon{
+    font-size:25px;
+    margin-bottom:5px;
 }
 
 /* SECTIONS */
-section{padding:80px 10%;text-align:center;}
+
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    line-height:1.2;
+    margin-bottom:12px;
+    color:#123b60;
+}
+
+.section-title p{
+    color:#617387;
+}
+
+/* SERVICES */
+
+.services{
+    background:#f7fafc;
+}
 
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
 .card{
-background:white;padding:20px;border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-cursor:pointer;
-transition:0.3s;
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(21,54,82,.08);
+    transition:.25s;
+    height:100%;
 }
-.card:hover{transform:scale(1.05);}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(21,54,82,.13);
+}
 
 .card img{
-width:100%;height:180px;object-fit:cover;border-radius:10px;
+    width:100%;
+    height:190px;
+    object-fit:cover;
 }
 
-/* EMPRESA */
-.flex{
-display:flex;gap:40px;align-items:center;flex-wrap:wrap;
+.card-content{
+    padding:23px;
 }
-.img-box{width:45%;}
-.img-box img{width:100%;border-radius:15px;}
-.flex div{width:45%;}
+
+.card h3{
+    color:#123b60;
+    margin-bottom:9px;
+    font-size:21px;
+}
+
+.card p{
+    color:#617387;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.card-list{
+    color:#38566e;
+    font-size:14px;
+    line-height:1.9;
+}
+
+.price{
+    margin-top:15px;
+    color:#ef4444;
+    font-size:19px;
+    font-weight:800;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+.about-text h2{
+    font-size:36px;
+    color:#123b60;
+    margin-bottom:18px;
+}
+
+.about-text p{
+    color:#617387;
+    margin-bottom:20px;
+}
+
+.check-list{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.check-list li{
+    margin:10px 0;
+    font-weight:600;
+}
+
+/* PROCESS */
+
+.process{
+    background:#eef6fb;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    background:white;
+    padding:28px 20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.number{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#0ea5e9;
+    color:white;
+    font-weight:800;
+    font-size:20px;
+}
+
+.process-card h3{
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#617387;
+    font-size:14px;
+}
+
+/* AREAS */
+
+.areas{
+    background:white;
+    text-align:center;
+}
+
+.area-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    max-width:900px;
+    margin:auto;
+}
+
+.area{
+    background:#eef6fb;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:600;
+}
 
 /* CTA */
+
 .cta{
-background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
-color:white;
+    background:linear-gradient(135deg,#0b3c6f,#0ea5e9);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#f7fafc;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 6px 25px rgba(21,54,82,.07);
+}
+
+.contact-card .icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.contact-card h3{
+    margin-bottom:6px;
+}
+
+.contact-card a{
+    color:#0b78b8;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    background:#082b4c;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:5px 0;
+    font-size:14px;
+}
+
+.footer-links{
+    margin-top:12px;
+}
+
+.footer-links a{
+    color:white;
+    margin:0 8px;
+    font-size:13px;
 }
 
 /* WHATSAPP */
+
 .whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;padding:15px 22px;
-border-radius:50px;font-weight:700;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#25D366;
+    color:white;
+    padding:14px 20px;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
-footer{
-background:#0b3c6f;color:white;padding:20px;text-align:center;
+/* MOBILE */
+
+.mobile-menu{
+    display:none;
 }
 
-@media(max-width:900px){
-.img-box,.flex div{width:100%;}
+@media(max-width:950px){
+
+    .nav-menu{
+        gap:14px;
+    }
+
+    .nav-link{
+        font-size:14px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+
+    #navbar{
+        padding:12px 5%;
+    }
+
+    .logo img{
+        height:44px;
+    }
+
+    .nav-menu{
+        display:none;
+    }
+
+    .hero{
+        min-height:680px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+        font-size:14px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2,
+    .about-text h2{
+        font-size:30px;
+    }
+
+    .cta h2{
+        font-size:31px;
+    }
+
+    .whatsapp{
+        right:12px;
+        bottom:12px;
+        padding:12px 17px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav id="navbar">
-<div class="logo">
-<img src="logo.png" alt="logo">
-</div>
 
-<div>
-<a href="#inicio" class="nav-link">Inicio</a>
-<a href="#servicios" class="nav-link">Servicios</a>
-<a href="#empresa" class="nav-link">Empresa</a>
-<a href="#reserva" class="nav-link">Reserva</a>
-</div>
+    <a href="#inicio" class="logo">
+        <img src="logo.png" alt="Clean Málaga Costa">
+    </a>
 
-<div class="phone">📞 602 350 840</div>
+    <div class="nav-menu">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#empresa" class="nav-link">Nosotros</a>
+        <a href="#zonas" class="nav-link">Zonas</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="#contacto" class="nav-button">Solicitar presupuesto</a>
+    </div>
+
 </nav>
 
+
+<!-- HERO -->
+
 <section id="inicio" class="hero">
-<div class="hero-content">
 
-<h1>Reserva tu limpieza en Málaga en menos de 1 minuto</h1>
+    <div class="hero-content">
 
-<!-- NUEVO BLOQUE CONFIANZA -->
-<p style="margin-top:10px;font-weight:600;">
-✔ Sin compromiso<br>
-✔ Precio cerrado<br>
-✔ Servicio rápido en Málaga
-</p>
+        <div class="badge">
+            🧽 Limpieza profesional en Málaga y Costa del Sol
+        </div>
 
-<p style="font-size:18px;">
-💳 Pago online seguro • 📅 Reserva inmediata • ⚡ Servicio en 24h
-</p>
+        <h1>
+            Una limpieza impecable para tu hogar o negocio
+        </h1>
 
-<p style="background:#ef4444;padding:12px;border-radius:8px;margin:15px 0;font-weight:700;">
-🔥 SOLO QUEDAN 3 PLAZAS ESTA SEMANA
-</p>
+        <p>
+            Servicios de limpieza profesionales para viviendas,
+            apartamentos turísticos, oficinas y limpiezas profundas.
+        </p>
 
-<p style="font-weight:600;">
-Desde 49€ • Reserva solo con pago confirmado
-</p>
+        <div class="hero-buttons">
 
-<a class="btn" href="#reserva" style="font-size:18px;">
-RESERVAR LIMPIEZA EN 24H
-</a>
+            <a href="#contacto" class="btn btn-primary">
+                Solicitar presupuesto
+            </a>
 
-<p style="margin-top:15px;">
-⭐⭐⭐⭐⭐ +50 clientes satisfechos en Málaga<br>
-📍 Málaga y Costa del Sol<br>
-🕒 Respuesta en menos de 24h
-</p>
+            <a href="https://wa.me/607618960" class="btn btn-secondary" target="_blank">
+                💬 Hablar por WhatsApp
+            </a>
 
-</div>
-</section>
+        </div>
 
-<!-- SERVICIOS (YA CON OFERTAS) -->
-<section id="servicios">
-<h2>Servicios Profesionales</h2>
+        <div class="hero-trust">
+            ✔ Atención rápida &nbsp;&nbsp; ✔ Servicio profesional &nbsp;&nbsp; ✔ Málaga y Costa del Sol
+        </div>
 
-<div class="cards">
-
-<a href="vivienda.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<h3>🏠 Viviendas</h3>
-<p>Limpieza completa de casas y apartamentos.</p>
-<p style="font-size:14px;">
-✔ Cocina<br>✔ Baños<br>✔ Suelos<br>✔ Habitaciones
-</p>
-<p style="color:#ef4444;font-weight:700;">
-🔥 <del>95€</del> 79€
-</p>
-</div>
-</a>
-
-<a href="oficina.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
-<h3>🏢 Oficinas</h3>
-<p>Espacios de trabajo limpios y organizados.</p>
-<p style="font-size:14px;">
-✔ Mesas<br>✔ Suelos<br>✔ Baños<br>✔ Zonas comunes
-</p>
-<p style="color:#ef4444;font-weight:700;">
-🔥 <del>120€</del> 99€
-</p>
-</div>
-</a>
-
-<a href="airbnb.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
-<h3>🧼 Airbnb</h3>
-<p>Servicio rápido para alquiler vacacional.</p>
-<p style="font-size:14px;">
-✔ Sábanas<br>✔ Baño<br>✔ Cocina<br>✔ Preparación
-</p>
-<p style="color:#ef4444;font-weight:700;">
-🔥 <del>60€</del> 49€
-</p>
-</div>
-</a>
-
-<a href="profunda.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<h3>✨ Limpieza profunda</h3>
-<p>Servicio intensivo premium.</p>
-<p style="font-size:14px;">
-✔ Cocina profunda<br>✔ Baños<br>✔ Zonas difíciles<br>✔ Suelos
-</p>
-<p style="color:#ef4444;font-weight:700;">
-🔥 <del>180€</del> 149€
-</p>
-</div>
-</a>
-
-</div>
-</section>
-
-<!-- NUEVO BLOQUE OPINIONES -->
-<section>
-<h2>Opiniones de clientes</h2>
-
-<p>⭐⭐⭐⭐⭐ “Servicio rápido y profesional”</p>
-<p>⭐⭐⭐⭐⭐ “Todo perfecto, repetiré seguro”</p>
-<p>⭐⭐⭐⭐⭐ “Muy recomendable en Málaga”</p>
-</section>
-
-<section id="empresa" class="flex">
-<div class="img-box">
-<img src="empresa.jpg" alt="empresa">
-</div>
-
-<div>
-<h2>Empresa de Confianza en Málaga</h2>
-<p>Empresa profesional con resultados garantizados y atención rápida.</p>
-
-<p>
-✔ Atención rápida<br>
-✔ Servicio profesional<br>
-✔ Resultados garantizados
-</p>
-
-<a class="btn" href="#reserva">Reservar ahora</a>
-</div>
-</section>
-
-<section id="reserva" class="cta">
-
-<h2>Reserva tu limpieza en 1 minuto</h2>
-
-<p>
-1️⃣ Elige tu servicio<br>
-2️⃣ Realiza el pago<br>
-3️⃣ Reserva tu fecha
-</p>
-
-<p style="background:#ef4444;padding:10px;border-radius:8px;margin:15px 0;">
-⚠️ SOLO CLIENTES CON PAGO CONFIRMADO
-</p>
-
-<p style="font-weight:700;">⬇️ Selecciona y paga tu servicio</p>
-
-<div>
-
-<a class="btn" href="https://buy.stripe.com/3cIfZg8md9by8An4si6J207" target="_blank">
-🧼 Airbnb - 49€
-</a><br><br>
-
-<a class="btn" href="https://buy.stripe.com/9B6dR845X73qg2P1g66J206" target="_blank">
-🏠 Vivienda - 79€
-</a><br><br>
-
-<a class="btn" href="https://buy.stripe.com/eVq7sK45X5ZmcQD6Aq6J205" target="_blank">
-🏢 Oficina - 99€
-</a><br><br>
-
-<a class="btn" href="https://buy.stripe.com/3cIbJ00TL3ReaIv8Iy6J204" target="_blank">
-✨ Profunda - 149€
-</a>
-
-</div>
-
-<div style="margin-top:40px;">
-<h3>📅 SOLO DESPUÉS DEL PAGO</h3>
-
-<a class="btn" href="https://calendar.app.google/X62mF6Rvr5LmnZz17" target="_blank" style="background:#0ea5e9;">
-Seleccionar día y hora
-</a>
-</div>
+    </div>
 
 </section>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+
+    <div class="container">
+
+        <div class="trust-grid">
+
+            <div class="trust-item">
+                <div class="trust-icon">⚡</div>
+                Respuesta rápida
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">🧽</div>
+                Limpieza profesional
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">💬</div>
+                Atención personalizada
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon">📍</div>
+                Málaga y Costa del Sol
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="servicios" class="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Nuestros servicios</h2>
+
+            <p>
+                Soluciones de limpieza adaptadas a cada tipo de espacio.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <a href="vivienda.html">
+
+                <div class="card">
+
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Limpieza de viviendas">
+
+                    <div class="card-content">
+
+                        <h3>🏠 Viviendas</h3>
+
+                        <p>
+                            Limpieza de casas y apartamentos para mantener tu hogar limpio y agradable.
+                        </p>
+
+                        <div class="card-list">
+                            ✔ Cocina<br>
+                            ✔ Baños<br>
+                            ✔ Habitaciones<br>
+                            ✔ Suelos
+                        </div>
+
+                        <div class="price">
+                            Desde 79€
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a href="airbnb.html">
+
+                <div class="card">
+
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Limpieza de Airbnb">
+
+                    <div class="card-content">
+
+                        <h3>🧼 Airbnb</h3>
+
+                        <p>
+                            Preparación profesional de apartamentos turísticos entre huéspedes.
+                        </p>
+
+                        <div class="card-list">
+                            ✔ Limpieza<br>
+                            ✔ Baños<br>
+                            ✔ Cocina<br>
+                            ✔ Preparación
+                        </div>
+
+                        <div class="price">
+                            Desde 49€
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a href="oficina.html">
+
+                <div class="card">
+
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Limpieza de oficinas">
+
+                    <div class="card-content">
+
+                        <h3>🏢 Oficinas</h3>
+
+                        <p>
+                            Espacios de trabajo limpios, cuidados y preparados para tu equipo.
+                        </p>
+
+                        <div class="card-list">
+                            ✔ Mesas<br>
+                            ✔ Suelos<br>
+                            ✔ Baños<br>
+                            ✔ Zonas comunes
+                        </div>
+
+                        <div class="price">
+                            Desde 99€
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a href="profunda.html">
+
+                <div class="card">
+
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="Limpieza profunda">
+
+                    <div class="card-content">
+
+                        <h3>✨ Limpieza profunda</h3>
+
+                        <p>
+                            Una limpieza intensiva para espacios que necesitan una atención especial.
+                        </p>
+
+                        <div class="card-list">
+                            ✔ Cocina profunda<br>
+                            ✔ Baños<br>
+                            ✔ Zonas difíciles<br>
+                            ✔ Suelos
+                        </div>
+
+                        <div class="price">
+                            Desde 149€
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="empresa" class="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img src="empresa.jpg" alt="Equipo de Clean Málaga Costa">
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h2>Profesionales de limpieza en Málaga</h2>
+
+                <p>
+                    En Clean Málaga Costa ofrecemos servicios de limpieza
+                    pensados para particulares, propietarios de apartamentos
+                    turísticos y empresas.
+                </p>
+
+                <p>
+                    Nuestro objetivo es sencillo: ofrecer un servicio
+                    profesional, organizado y adaptado a las necesidades
+                    de cada cliente.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>✔ Atención personalizada</li>
+                    <li>✔ Servicio profesional</li>
+                    <li>✔ Comunicación rápida</li>
+                    <li>✔ Diferentes soluciones de limpieza</li>
+
+                </ul>
+
+                <a href="#contacto" class="btn btn-primary">
+                    Contactar ahora
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>¿Cómo trabajamos?</h2>
+
+            <p>
+                Un proceso sencillo para que organizar tu limpieza sea fácil.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <div class="number">1</div>
+
+                <h3>Contacta</h3>
+
+                <p>
+                    Escríbenos por WhatsApp o solicita información.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="number">2</div>
+
+                <h3>Presupuesto</h3>
+
+                <p>
+                    Revisamos tus necesidades y te informamos del servicio.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="number">3</div>
+
+                <h3>Organizamos</h3>
+
+                <p>
+                    Coordinamos contigo el día y horario.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="number">4</div>
+
+                <h3>Limpiamos</h3>
+
+                <p>
+                    Realizamos el servicio acordado de forma profesional.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AREAS -->
+
+<section id="zonas" class="areas">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Zonas de servicio</h2>
+
+            <p>
+                Trabajamos en Málaga y diferentes zonas de la Costa del Sol.
+            </p>
+
+        </div>
+
+
+        <div class="area-list">
+
+            <span class="area">Málaga</span>
+            <span class="area">Costa del Sol</span>
+            <span class="area">Torremolinos</span>
+            <span class="area">Benalmádena</span>
+            <span class="area">Fuengirola</span>
+            <span class="area">Mijas</span>
+            <span class="area">Marbella</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>¿Necesitas una limpieza?</h2>
+
+        <p>
+            Cuéntanos qué necesitas y te ayudaremos a encontrar
+            el servicio adecuado para tu vivienda, apartamento u oficina.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="https://wa.me/607618960" class="btn btn-secondary" target="_blank">
+                💬 WhatsApp
+            </a>
+
+            <a href="tel:+34602350840" class="btn btn-primary">
+                📞 602 350 840
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contacto" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contacta con nosotros</h2>
+
+            <p>
+                Estamos disponibles para resolver tus dudas y preparar tu servicio.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="icon">💬</div>
+
+                <h3>WhatsApp</h3>
+
+                <a href="https://wa.me/607618960" target="_blank">
+                    607 618 960
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">📞</div>
+
+                <h3>Teléfono</h3>
+
+                <a href="tel:+34602350840">
+                    602 350 840
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">📍</div>
+
+                <h3>Zona</h3>
+
+                <p>
+                    Málaga y Costa del Sol
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-© 2026 Clean Málaga Costa
+
+    <p>
+        © 2026 Clean Málaga Costa
+    </p>
+
+    <p>
+        Servicios profesionales de limpieza en Málaga y Costa del Sol.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+
+    </div>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/607618960">WhatsApp</a>
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/607618960"
+    target="_blank"
+    aria-label="Contactar por WhatsApp"
+>
+    💬 WhatsApp
+</a>
+
 
 <script>
+
 window.addEventListener("scroll", function(){
-document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+
+    const navbar = document.getElementById("navbar");
+
+    navbar.classList.toggle(
+        "scrolled",
+        window.scrollY > 50
+    );
+
 });
+
 </script>
 
 </body>
